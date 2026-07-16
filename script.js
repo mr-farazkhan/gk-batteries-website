@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="loc-btns">
             <a href="tel:${loc.phoneLink}" class="loc-btn amber"><i data-lucide="phone"></i> Call</a>
             <a href="${wa('Hi, enquiry about ' + loc.name)}" target="_blank" class="loc-btn green"><i data-lucide="message-circle"></i> WhatsApp</a>
-            <a href="https://www.google.com/maps/search/${loc.mapQuery}" target="_blank" class="loc-btn outline"><i data-lucide="navigation"></i> Directions</a>
+            <a href="${loc.mapLink}" target="_blank" class="loc-btn outline"><i data-lucide="navigation"></i> Directions</a>
           </div>
         </div>
         <div class="loc-map"><iframe src="${loc.mapEmbed}" allowfullscreen loading="lazy" title="${esc(loc.name)}"></iframe></div>
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="footer-col"><h4>Contact</h4>
         <a href="${phone()}">📞 ${esc(D.profile.phoneDisplay)}</a>
         ${socialHtml.join('')}
-        <a href="https://www.google.com/maps/search/GK+Batteries+Alnavar" target="_blank">📍 Directions</a>
+        <a href="${D.locations[0].mapLink}" target="_blank">📍 Directions</a>
       </div>
     `;
   }

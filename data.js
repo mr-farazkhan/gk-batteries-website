@@ -211,7 +211,7 @@ const SITE_DATA = {
       phone: "+91 94486 67528",
       phoneLink: "+919448667528",
       highlight: "🚗 Specializes in highway battery replacement, jump start service, emergency roadside assistance & quick car/bike battery swaps for travelers.",
-      mapQuery: "GK+Batteries+Goa+Cross+Alnavar",
+      mapLink: "https://maps.google.com/?cid=1989083514408822554",
       mapEmbed: "https://maps.google.com/maps?cid=1989083514408822554&output=embed"
     },
     {
@@ -223,7 +223,7 @@ const SITE_DATA = {
       phone: "+91 94486 67528",
       phoneLink: "+919448667528",
       highlight: "🔧 Full-service hub — all battery sales, inverter installation, charging, agri sprayer pump service, rental batteries, repair & annual maintenance.",
-      mapQuery: "GK+Batteries+Azad+Road+Alnavar",
+      mapLink: "https://maps.google.com/maps?q=GK+Battery,+Azad+Road,+Alnavar,+Karnataka",
       mapEmbed: "https://maps.google.com/maps?q=GK+Battery,+Azad+Road,+Alnavar,+Karnataka&output=embed"
     }
   ]
