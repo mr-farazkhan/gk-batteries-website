@@ -212,7 +212,7 @@ const SITE_DATA = {
       phoneLink: "+919448667528",
       highlight: "🚗 Specializes in highway battery replacement, jump start service, emergency roadside assistance & quick car/bike battery swaps for travelers.",
       mapQuery: "GK+Batteries+Goa+Cross+Alnavar",
-      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15345!2d74.595!3d15.435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf2e3b00000001%3A0x1!2sAlnavar%2C+Karnataka!5e0!3m2!1sen!2sin!4v1"
+      mapEmbed: "https://maps.google.com/maps?q=NH+67,+Goa+Cross,+Alnavar,+Karnataka&output=embed"
     },
     {
       name: "Branch 2 — Azad Road",
@@ -224,7 +224,7 @@ const SITE_DATA = {
       phoneLink: "+919448667528",
       highlight: "🔧 Full-service hub — all battery sales, inverter installation, charging, agri sprayer pump service, rental batteries, repair & annual maintenance.",
       mapQuery: "GK+Batteries+Azad+Road+Alnavar",
-      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15345!2d74.595!3d15.435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf2e3b00000001%3A0x1!2sAlnavar%2C+Karnataka!5e0!3m2!1sen!2sin!4v1"
+      mapEmbed: "https://maps.google.com/maps?q=GK+Battery,+Azad+Road,+Alnavar,+Karnataka&output=embed"
     }
   ]
 };
