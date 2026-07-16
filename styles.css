@@ -271,3 +271,23 @@ ul{list-style:none}
   .stat-num{font-size:1.6rem}
   .emergency-inner{flex-direction:column;gap:12px}
 }
+@media(max-width:320px){
+  .container{padding:0 12px}
+  .hero-left h1{font-size:1.4rem}
+  .hero-sub{font-size:.9rem}
+  .sec-header h2{font-size:1.5rem}
+  .stat-num{font-size:1.3rem}
+  .stat-card{padding:16px 12px}
+  .stats-grid{gap:10px}
+  .svc-card{padding:20px 16px}
+  .p-body{padding:14px}
+  .p-body h3{font-size:1rem}
+  .why-grid{grid-template-columns:1fr}
+  .why-card{padding:20px 12px}
+  .loc-body{padding:16px}
+  .btn{padding:10px 20px;font-size:.85rem}
+  .emergency-text{font-size:1rem}
+  .call-float{width:52px;height:52px;bottom:16px;right:16px}
+  .call-float svg{width:24px;height:24px}
+  .footer-brand-block p{font-size:.82rem}
+}

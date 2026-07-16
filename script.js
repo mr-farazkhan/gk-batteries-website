@@ -101,11 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
       `<button class="f-tab${i === 0 ? ' active' : ''}" data-cat="${c.key}">${esc(c.label)}</button>`
     ).join('');
 
-    // Build product cards
+    // Build product cards (lazy loaded, with explicit dimensions to prevent CLS)
     prodGrid.innerHTML = D.products.map(p => `
       <div class="p-card fade-in" data-cat="${p.category}">
         <div class="p-img">
-          <img src="${p.image}" alt="${esc(p.title)}"/>
+          <img src="${p.image}" alt="${esc(p.title)}" width="280" height="160" loading="lazy" decoding="async"/>
           ${p.badge ? `<span class="p-badge ${p.badgeType}">${esc(p.badge)}</span>` : ''}
         </div>
         <div class="p-body">
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p class="p-brand ${p.brand}">${esc(p.brandLabel)}</p>
           <ul class="p-features">${p.features.map(f => `<li><i data-lucide="check"></i>${esc(f)}</li>`).join('')}</ul>
           <div class="p-exchange"><i data-lucide="repeat"></i> Old Battery Exchange Discount</div>
-          <a href="${phone()}" class="p-call"><i data-lucide="phone"></i> Call to Enquire</a>
+          <a href="${phone()}" class="p-call" rel="noopener"><i data-lucide="phone"></i> Call to Enquire</a>
         </div>
       </div>
     `).join('');
@@ -146,11 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="loc-row"><i data-lucide="phone"></i><span>${esc(loc.phone)}</span></div>
           <div class="loc-highlight">${esc(loc.highlight)}</div>
           <div class="loc-btns">
-            <a href="tel:${loc.phoneLink}" class="loc-btn amber"><i data-lucide="phone"></i> Call Now</a>
-            <a href="${loc.mapLink}" target="_blank" class="loc-btn outline"><i data-lucide="navigation"></i> Get Directions</a>
+            <a href="tel:${loc.phoneLink}" class="loc-btn amber" rel="noopener"><i data-lucide="phone"></i> Call Now</a>
+            <a href="${loc.mapLink}" target="_blank" class="loc-btn outline" rel="noopener noreferrer"><i data-lucide="navigation"></i> Get Directions</a>
           </div>
         </div>
-        <div class="loc-map"><iframe src="${loc.mapEmbed}" allowfullscreen loading="lazy" title="${esc(loc.name)}"></iframe></div>
+        <div class="loc-map"><iframe src="${loc.mapEmbed}" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="${esc(loc.name)}"></iframe></div>
       </div>
     `).join('');
   }
@@ -219,13 +219,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileDrawer = document.getElementById('mobileDrawer');
   if (mobileBtn && mobileDrawer) {
     mobileBtn.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('open');
+      const isOpen = mobileDrawer.classList.toggle('open');
       mobileBtn.classList.toggle('active');
+      mobileBtn.setAttribute('aria-expanded', isOpen);
+      mobileDrawer.setAttribute('aria-hidden', !isOpen);
     });
     mobileDrawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileDrawer.classList.remove('open');
         mobileBtn.classList.remove('active');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+        mobileDrawer.setAttribute('aria-hidden', 'true');
       });
     });
   }

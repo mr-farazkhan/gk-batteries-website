@@ -1,39 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"/>
 <title>GK Batteries Alnavar</title>
 <meta name="description" content=""/>
+<meta name="theme-color" content="#0a0e1a"/>
+<meta name="robots" content="index, follow"/>
 <link rel="icon" type="image/png" href="images/favicon.png"/>
+<!-- Preconnect to Google Fonts for faster font loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<!-- Preconnect to Google Maps for iframe embeds -->
+<link rel="preconnect" href="https://maps.google.com"/>
+<link rel="dns-prefetch" href="https://maps.google.com"/>
 <link rel="stylesheet" href="styles.css"/>
+
+<!-- Structured Data: LocalBusiness Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "GK Batteries",
+  "description": "Authorized multi-brand battery & inverter dealer in Alnavar. Exide, Amaron, SF Batteries & Luminous. Jump start, rental battery, agri sprayer service.",
+  "url": "https://gkbatteries.in",
+  "telephone": "+919448667528",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "NH 67, Goa Cross",
+      "addressLocality": "Alnavar",
+      "addressRegion": "Karnataka",
+      "postalCode": "581103",
+      "addressCountry": "IN"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Azad Road",
+      "addressLocality": "Alnavar",
+      "addressRegion": "Karnataka",
+      "postalCode": "581103",
+      "addressCountry": "IN"
+    }
+  ],
+  "openingHours": "Mo-Sa 09:00-20:30",
+  "priceRange": "₹₹",
+  "image": "images/logo.png",
+  "sameAs": []
+}
+</script>
 </head>
 <body>
 
 <!-- TICKER -->
-<div class="ticker"><div class="ticker-track" id="tickerTrack"></div></div>
+<div class="ticker" role="marquee" aria-label="Announcements"><div class="ticker-track" id="tickerTrack"></div></div>
 
 <!-- NAV -->
-<nav class="topbar" id="topbar">
+<nav class="topbar" id="topbar" role="navigation" aria-label="Main navigation">
 <div class="container topbar-inner">
-<a href="#" class="tb-brand"><img src="images/logo.png" alt="GK Batteries" class="tb-brand-logo"/><span class="tb-name" id="navBrandName">Batteries<small>Alnavar, Karnataka</small></span></a>
+<a href="#" class="tb-brand"><img src="images/logo.png" alt="GK Batteries Logo" class="tb-brand-logo" width="40" height="40" loading="eager" fetchpriority="high"/><span class="tb-name" id="navBrandName">Batteries<small>Alnavar, Karnataka</small></span></a>
 <div class="tb-links">
 <a href="#services" class="tb-link">Services</a>
 <a href="#products" class="tb-link">Products</a>
 <a href="#locations" class="tb-link">Branches</a>
 <a href="#review" class="tb-link">Review</a>
 </div>
-<div class="tb-actions"><a href="#" class="tb-call primary" id="navCallBtn"><i data-lucide="phone"></i> Call Now</a></div>
-<button class="mobile-menu-btn" id="mobileBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="tb-actions"><a href="#" class="tb-call primary" id="navCallBtn" rel="noopener"><i data-lucide="phone"></i> Call Now</a></div>
+<button class="mobile-menu-btn" id="mobileBtn" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div>
-<div class="mobile-drawer" id="mobileDrawer">
-<a href="#services">Services</a><a href="#products">Products</a><a href="#locations">Branches</a><a href="#review">Review</a>
-<a href="#" id="mobileCallLink">📞 Call Now</a>
+<div class="mobile-drawer" id="mobileDrawer" role="menu" aria-hidden="true">
+<a href="#services" role="menuitem">Services</a>
+<a href="#products" role="menuitem">Products</a>
+<a href="#locations" role="menuitem">Branches</a>
+<a href="#review" role="menuitem">Review</a>
+<a href="#" id="mobileCallLink" role="menuitem">📞 Call Now</a>
 </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-<div class="hero-grid-bg"></div>
+<!-- HERO (above the fold — eager loading) -->
+<section class="hero" aria-label="Hero banner">
+<div class="hero-grid-bg" aria-hidden="true"></div>
 <div class="container">
 <div class="hero-grid">
 <div class="hero-left fade-in">
@@ -50,10 +96,10 @@
 </section>
 
 <!-- BRAND MARQUEE -->
-<div class="brand-marquee"><div class="marquee-track" id="marqueeTrack"></div></div>
+<div class="brand-marquee" aria-label="Authorized brands"><div class="marquee-track" id="marqueeTrack"></div></div>
 
 <!-- SERVICES -->
-<section class="section" id="services">
+<section class="section" id="services" aria-label="Services">
 <div class="container">
 <div class="sec-header fade-in">
 <div class="sec-tag"><i data-lucide="wrench"></i> Our Services</div>
@@ -65,28 +111,28 @@
 </section>
 
 <!-- EMERGENCY STRIP -->
-<div class="emergency-strip">
+<div class="emergency-strip" role="alert" aria-label="Emergency contact">
 <div class="container emergency-inner">
 <span class="emergency-text"><i data-lucide="alert-triangle"></i> Battery Dead? Stranded on Highway?</span>
-<a href="#" class="emergency-btn" id="emergencyBtn"><i data-lucide="phone"></i> CALL NOW</a>
+<a href="#" class="emergency-btn" id="emergencyBtn" rel="noopener"><i data-lucide="phone"></i> CALL NOW</a>
 </div>
 </div>
 
 <!-- PRODUCTS -->
-<section class="section" id="products">
+<section class="section" id="products" aria-label="Product catalog">
 <div class="container">
 <div class="sec-header fade-in">
 <div class="sec-tag"><i data-lucide="battery-charging"></i> Product Catalog</div>
 <h2>Browse Our Battery &amp; Inverter Range</h2>
 <p>Genuine products from India's top brands. Old battery exchange discount on every purchase.</p>
 </div>
-<div class="filter-tabs fade-in" id="filterTabs"></div>
+<div class="filter-tabs fade-in" id="filterTabs" role="tablist" aria-label="Filter products"></div>
 <div class="prod-grid" id="prodGrid"></div>
 </div>
 </section>
 
 <!-- WHY CHOOSE US -->
-<section class="section">
+<section class="section" aria-label="Why choose GK Batteries">
 <div class="container">
 <div class="sec-header fade-in">
 <div class="sec-tag"><i data-lucide="award"></i> The GK Advantage</div>
@@ -97,7 +143,7 @@
 </section>
 
 <!-- LOCATIONS -->
-<section class="section" id="locations">
+<section class="section" id="locations" aria-label="Branch locations">
 <div class="container">
 <div class="sec-header fade-in">
 <div class="sec-tag"><i data-lucide="map-pin"></i> Our Branches</div>
@@ -108,8 +154,8 @@
 </div>
 </section>
 
-<!-- REVIEW CTA (replaces fake reviews) -->
-<section class="section" id="review">
+<!-- REVIEW CTA -->
+<section class="section" id="review" aria-label="Leave a review">
 <div class="container">
 <div class="sec-header fade-in">
 <div class="sec-tag"><i data-lucide="star"></i> Rate Us</div>
@@ -121,7 +167,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
+<footer class="footer" role="contentinfo">
 <div class="container">
 <div class="footer-grid" id="footerGrid"></div>
 <div class="footer-bottom">
@@ -131,10 +177,11 @@
 </footer>
 
 <!-- FLOATING CALL BUTTON -->
-<a href="#" class="call-float" id="callFloat" aria-label="Call Now"><i data-lucide="phone"></i></a>
+<a href="#" class="call-float" id="callFloat" aria-label="Call GK Batteries now" rel="noopener"><i data-lucide="phone"></i></a>
 
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-<script src="data.js"></script>
-<script src="script.js"></script>
+<!-- Scripts: defer for non-blocking load -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+<script src="data.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>
