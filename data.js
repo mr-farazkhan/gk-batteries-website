@@ -212,7 +212,7 @@ const SITE_DATA = {
       phoneLink: "+919448667528",
       highlight: "🚗 Specializes in highway battery replacement, jump start service, emergency roadside assistance & quick car/bike battery swaps for travelers.",
       mapQuery: "GK+Batteries+Goa+Cross+Alnavar",
-      mapEmbed: "https://maps.google.com/maps?q=NH+67,+Goa+Cross,+Alnavar,+Karnataka&output=embed"
+      mapEmbed: "https://maps.google.com/maps?cid=1989083514408822554&output=embed"
     },
     {
       name: "Branch 2 — Azad Road",
