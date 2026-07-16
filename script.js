@@ -97,13 +97,27 @@ document.addEventListener('DOMContentLoaded', () => {
         cats.push({ key: p.category, label });
       }
     });
-    filterTabs.innerHTML = cats.map((c, i) =>
-      `<button class="f-tab${i === 0 ? ' active' : ''}" data-cat="${c.key}">${esc(c.label)}</button>`
-    ).join('');
 
-    // Build product cards (lazy loaded, with explicit dimensions to prevent CLS)
+    // Build brand tabs
+    const brandSet = new Set();
+    D.products.forEach(p => brandSet.add(p.brand));
+    const brandLabels = { exide: 'Exide', amaron: 'Amaron', sf: 'SF Sonic', luminous: 'Luminous' };
+
+    filterTabs.innerHTML = `
+      <div class="filter-row" role="tablist" aria-label="Filter by category">
+        <span class="filter-label">Category:</span>
+        ${cats.map((c, i) => `<button class="f-tab${i === 0 ? ' active' : ''}" data-filter="cat" data-val="${c.key}">${esc(c.label)}</button>`).join('')}
+      </div>
+      <div class="filter-row" role="tablist" aria-label="Filter by brand">
+        <span class="filter-label">Brand:</span>
+        <button class="f-tab brand active" data-filter="brand" data-val="all">All Brands</button>
+        ${[...brandSet].map(b => `<button class="f-tab brand" data-filter="brand" data-val="${b}">${esc(brandLabels[b] || b)}</button>`).join('')}
+      </div>
+    `;
+
+    // Build product cards with data-brand
     prodGrid.innerHTML = D.products.map(p => `
-      <div class="p-card fade-in" data-cat="${p.category}">
+      <div class="p-card fade-in" data-cat="${p.category}" data-brand="${p.brand}">
         <div class="p-img">
           <img src="${p.image}" alt="${esc(p.title)}" width="280" height="160" loading="lazy" decoding="async"/>
           ${p.badge ? `<span class="p-badge ${p.badgeType}">${esc(p.badge)}</span>` : ''}
@@ -234,20 +248,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- PRODUCT FILTER ---
-  document.querySelectorAll('.f-tab').forEach(tab => {
+  // --- PRODUCT FILTER (supports both category and brand) ---
+  let activeCat = 'all';
+  let activeBrand = 'all';
+  function filterProducts() {
+    document.querySelectorAll('.p-card').forEach(card => {
+      const matchCat = activeCat === 'all' || card.dataset.cat === activeCat;
+      const matchBrand = activeBrand === 'all' || card.dataset.brand === activeBrand;
+      if (matchCat && matchBrand) {
+        card.classList.remove('hidden');
+        card.style.animation = 'fadeUp .4s ease forwards';
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+  document.querySelectorAll('.f-tab[data-filter="cat"]').forEach(tab => {
     tab.addEventListener('click', () => {
-      document.querySelectorAll('.f-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.f-tab[data-filter="cat"]').forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-      const cat = tab.dataset.cat;
-      document.querySelectorAll('.p-card').forEach(card => {
-        if (cat === 'all' || card.dataset.cat === cat) {
-          card.classList.remove('hidden');
-          card.style.animation = 'fadeUp .4s ease forwards';
-        } else {
-          card.classList.add('hidden');
-        }
-      });
+      activeCat = tab.dataset.val;
+      filterProducts();
+    });
+  });
+  document.querySelectorAll('.f-tab[data-filter="brand"]').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.f-tab[data-filter="brand"]').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      activeBrand = tab.dataset.val;
+      filterProducts();
     });
   });
 
