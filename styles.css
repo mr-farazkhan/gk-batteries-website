@@ -159,9 +159,9 @@ ul{list-style:none}
 .p-features li svg{width:14px;height:14px;color:var(--green)}
 .p-exchange{padding:8px 12px;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.15);border-radius:8px;font-size:.8rem;color:var(--amber);display:flex;align-items:center;gap:6px;margin-bottom:14px}
 .p-exchange svg{width:14px;height:14px}
-.p-wa{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px;background:#25d366;color:#fff;border-radius:8px;font-size:.85rem;font-weight:600;transition:all .3s}
-.p-wa:hover{background:#20bd5a;transform:translateY(-2px)}
-.p-wa svg{width:16px;height:16px}
+.p-call{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px;background:var(--amber);color:#000;border-radius:8px;font-size:.85rem;font-weight:600;transition:all .3s}
+.p-call:hover{box-shadow:0 0 20px var(--amber-glow);transform:translateY(-2px)}
+.p-call svg{width:16px;height:16px}
 
 /* --- LOCATIONS --- */
 .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
@@ -215,11 +215,21 @@ ul{list-style:none}
 .footer-col a:hover{color:var(--amber)}
 .footer-bottom{border-top:1px solid var(--glass-border);padding-top:24px;text-align:center;font-size:.82rem;color:var(--text3)}
 
-/* --- FLOATING WHATSAPP --- */
-.wa-float{position:fixed;bottom:24px;right:24px;z-index:999;width:60px;height:60px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:all .3s;animation:waPulse 2s infinite}
-.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(37,211,102,.6)}
-.wa-float svg{width:28px;height:28px;color:#fff}
-@keyframes waPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 30px rgba(37,211,102,.6)}}
+/* --- FLOATING CALL BUTTON --- */
+.call-float{position:fixed;bottom:24px;right:24px;z-index:999;width:60px;height:60px;background:var(--amber);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px var(--amber-glow);transition:all .3s;animation:callPulse 2s infinite}
+.call-float:hover{transform:scale(1.1);box-shadow:0 6px 30px var(--amber-glow)}
+.call-float svg{width:28px;height:28px;color:#000}
+@keyframes callPulse{0%,100%{box-shadow:0 4px 20px var(--amber-glow)}50%{box-shadow:0 4px 30px rgba(245,158,11,.7)}}
+
+/* --- REVIEW CTA CARD --- */
+.review-cta-card{max-width:600px;margin:0 auto;text-align:center;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:48px 32px}
+.review-cta-icon{width:64px;height:64px;margin:0 auto 20px;border-radius:50%;background:rgba(245,158,11,.12);display:flex;align-items:center;justify-content:center;color:var(--amber)}
+.review-cta-icon svg{width:32px;height:32px}
+.review-cta-card h3{font-family:var(--font-head);font-size:1.4rem;font-weight:700;margin-bottom:10px}
+.review-cta-card p{color:var(--text2);margin-bottom:24px;font-size:.95rem}
+.review-cta-contact{margin-top:28px;padding-top:24px;border-top:1px solid var(--glass-border)}
+.review-cta-contact p{color:var(--text3);font-size:.88rem;margin-bottom:12px}
+.review-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
 /* --- SCROLL ANIMATIONS --- */
 .fade-in{opacity:0;transform:translateY(30px);transition:all .6s ease-out}

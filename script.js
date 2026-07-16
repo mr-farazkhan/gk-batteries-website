@@ -3,7 +3,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const D = SITE_DATA;
-  const wa = (text) => `https://wa.me/${D.profile.whatsapp}?text=${encodeURIComponent(text)}`;
+
   const phone = () => `tel:${D.profile.phone}`;
   const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroCtas) {
     heroCtas.innerHTML = `
       <a href="${phone()}" class="btn btn-amber"><i data-lucide="phone-call"></i> Call Now — ${esc(D.profile.phoneDisplay)}</a>
-      <a href="${wa(D.profile.whatsappMessage)}" target="_blank" class="btn btn-green"><i data-lucide="message-circle"></i> WhatsApp Us</a>
+      <a href="#products" class="btn btn-blue"><i data-lucide="battery-charging"></i> View Products</a>
     `;
   }
 
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p class="p-brand ${p.brand}">${esc(p.brandLabel)}</p>
           <ul class="p-features">${p.features.map(f => `<li><i data-lucide="check"></i>${esc(f)}</li>`).join('')}</ul>
           <div class="p-exchange"><i data-lucide="repeat"></i> Old Battery Exchange Discount</div>
-          <a href="${wa(p.whatsappText)}" target="_blank" class="p-wa"><i data-lucide="message-circle"></i> Check Price on WhatsApp</a>
+          <a href="${phone()}" class="p-call"><i data-lucide="phone"></i> Call to Enquire</a>
         </div>
       </div>
     `).join('');
@@ -146,9 +146,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="loc-row"><i data-lucide="phone"></i><span>${esc(loc.phone)}</span></div>
           <div class="loc-highlight">${esc(loc.highlight)}</div>
           <div class="loc-btns">
-            <a href="tel:${loc.phoneLink}" class="loc-btn amber"><i data-lucide="phone"></i> Call</a>
-            <a href="${wa('Hi, enquiry about ' + loc.name)}" target="_blank" class="loc-btn green"><i data-lucide="message-circle"></i> WhatsApp</a>
-            <a href="${loc.mapLink}" target="_blank" class="loc-btn outline"><i data-lucide="navigation"></i> Directions</a>
+            <a href="tel:${loc.phoneLink}" class="loc-btn amber"><i data-lucide="phone"></i> Call Now</a>
+            <a href="${loc.mapLink}" target="_blank" class="loc-btn outline"><i data-lucide="navigation"></i> Get Directions</a>
           </div>
         </div>
         <div class="loc-map"><iframe src="${loc.mapEmbed}" allowfullscreen loading="lazy" title="${esc(loc.name)}"></iframe></div>
@@ -168,10 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
           <i data-lucide="star"></i> Write a Google Review
         </a>
         <div class="review-cta-contact">
-          <p>Or reach us directly:</p>
+          <p>Or call us directly:</p>
           <div class="review-cta-btns">
             <a href="${phone()}" class="btn btn-amber"><i data-lucide="phone-call"></i> Call ${esc(D.profile.phoneDisplay)}</a>
-            <a href="${wa(D.profile.whatsappMessage)}" target="_blank" class="btn btn-green"><i data-lucide="message-circle"></i> WhatsApp</a>
           </div>
         </div>
       </div>
@@ -184,7 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const socialHtml = [];
     if (D.profile.socialLinks.facebook) socialHtml.push(`<a href="${D.profile.socialLinks.facebook}" target="_blank">Facebook</a>`);
     if (D.profile.socialLinks.instagram) socialHtml.push(`<a href="${D.profile.socialLinks.instagram}" target="_blank">Instagram</a>`);
-    socialHtml.push(`<a href="${wa(D.profile.whatsappMessage)}" target="_blank">💬 WhatsApp</a>`);
 
     footerGrid.innerHTML = `
       <div class="footer-brand-block">
@@ -210,9 +207,9 @@ document.addEventListener('DOMContentLoaded', () => {
     footerCopy.textContent = `© ${D.profile.sinceYear}–${new Date().getFullYear()} ${D.profile.name}, Alnavar. Authorized Multi-Brand Battery & Inverter Dealer. All rights reserved.`;
   }
 
-  // --- WHATSAPP FLOAT ---
-  const waFloat = document.getElementById('waFloat');
-  if (waFloat) waFloat.href = wa(D.profile.whatsappMessage);
+  // --- CALL FLOAT ---
+  const callFloat = document.getElementById('callFloat');
+  if (callFloat) callFloat.href = phone();
 
   // --- INIT LUCIDE ICONS ---
   if (window.lucide) lucide.createIcons();
