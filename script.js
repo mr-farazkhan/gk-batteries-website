@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const D = SITE_DATA;
   const wa = (text) => `https://wa.me/${D.profile.whatsapp}?text=${encodeURIComponent(text)}`;
   const phone = () => `tel:${D.profile.phone}`;
-  const esc = (s) => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
   // --- SEO ---
   document.title = D.profile.seo.title;
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- HERO ---
   const heroTitle = document.getElementById('heroTitle');
-  if (heroTitle) heroTitle.innerHTML = `${esc(D.profile.tagline).replace(/(Power Partner)/,'<span class="hl">$1</span>')}`;
+  if (heroTitle) heroTitle.innerHTML = `${esc(D.profile.tagline).replace(/(Power Partner)/, '<span class="hl">$1</span>')}`;
 
   const heroDesc = document.getElementById('heroDesc');
   if (heroDesc) heroDesc.textContent = D.profile.description;
