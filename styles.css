@@ -33,8 +33,8 @@ ul{list-style:none}
 .topbar-inner{display:flex;align-items:center;justify-content:space-between;width:100%}
 .tb-brand{display:flex;align-items:center;gap:10px}
 .tb-brand-logo{height:40px;width:40px;border-radius:8px}
-.tb-name{font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--text);line-height:1.1}
-.tb-name small{display:block;font-size:.7rem;font-weight:500;color:var(--text2);font-family:var(--font-body)}
+.tb-name{font-family:var(--font-head);font-size:1.8rem;font-weight:700;color:var(--text);line-height:1;display:flex;flex-direction:column}
+.tb-name small{font-size:.65rem;font-weight:500;color:var(--text2);font-family:var(--font-body);letter-spacing:.5px;margin-top:2px}
 .tb-links{display:flex;gap:8px}
 .tb-link{padding:8px 16px;border-radius:8px;font-size:.9rem;font-weight:500;color:var(--text2);transition:all .25s}
 .tb-link:hover{color:var(--amber);background:rgba(245,158,11,.08)}
