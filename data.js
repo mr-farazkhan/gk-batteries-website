@@ -6,7 +6,7 @@ const SITE_DATA = {
   profile: {
     name: "GK Batteries",
     tagline: "Your Trusted Power Partner in Alnavar",
-    description: "Authorized multi-brand battery & inverter dealer. From highway jump starts to home inverter setups, farm tractor batteries to emergency rentals — we keep Alnavar powered. Since 2011.",
+    description: "Multi-brand battery & inverter dealer with 50+ years of expertise. From handcrafting HR batteries to becoming Alnavar's most trusted authorized dealer for Exide, Amaron, SF & Luminous — we've powered this community since 1994.",
     phone: "+919448667528",
     phoneDisplay: "94486 67528",
     whatsapp: "919448667528",
@@ -27,26 +27,26 @@ const SITE_DATA = {
   // ─── STATS (shown in hero) ───
   stats: [
     { value: "50+", label: "Years Experience" },
-    { value: "5000+", label: "Batteries Sold" },
-    { value: "4.9★", label: "Google Rating" },
+    { value: "4", label: "Brands Authorized" },
+    { value: "4.9", label: "Google Rating" },
     { value: "2", label: "Branches" }
   ],
 
   // ─── TICKER MESSAGES ───
   ticker: [
-    "⚡ Jump Start Service Available 24/7",
-    "🔋 New Battery Stock Arrived — All Brands",
-    "📞 Call 94486 67528 for Instant Price",
-    "🔄 Old Battery Exchange — Best Rates",
-    "🏠 Rental Batteries for Functions & Emergencies",
-    "🌾 Agri Sprayer Pump Battery Service"
+    "Jump Start Service Available 24/7",
+    "New Battery Stock Arrived — All Brands",
+    "Call 94486 67528 for Instant Price",
+    "Old Battery Exchange — Best Rates",
+    "Rental Batteries for Functions & Emergencies",
+    "Agri Sprayer Pump Battery Service"
   ],
 
   // ─── HERO BADGES ───
   badges: [
     { icon: "shield-check", text: "Authorized Dealer" },
     { icon: "truck", text: "Doorstep Delivery" },
-    { icon: "clock", text: "Since 2011" },
+    { icon: "clock", text: "Since 1994" },
     { icon: "repeat", text: "Old Battery Exchange" }
   ],
 
@@ -61,7 +61,7 @@ const SITE_DATA = {
       title: "Jump Start Service",
       description: "Battery dead on the highway? Call us for instant jump start service on NH-67 Alnavar–Goa and Londa routes. Quick response, any vehicle.",
       branch: "highway",
-      branchLabel: "⚡ Highway Branch"
+      branchLabel: "Highway Branch"
     },
     {
       icon: "battery-charging",
@@ -69,7 +69,7 @@ const SITE_DATA = {
       title: "Battery Rental",
       description: "Short-term rental batteries for weddings, functions, events & emergencies. Inverter battery rental available with delivery and pickup.",
       branch: "both",
-      branchLabel: "✓ Both Branches"
+      branchLabel: "Both Branches"
     },
     {
       icon: "plug-zap",
@@ -77,7 +77,7 @@ const SITE_DATA = {
       title: "Battery Charging",
       description: "Professional battery charging service for all types — car, tractor, inverter. Slow charge and fast charge options with health check.",
       branch: "local",
-      branchLabel: "🏪 Azad Road Branch"
+      branchLabel: "Azad Road Branch"
     },
     {
       icon: "sprout",
@@ -85,7 +85,7 @@ const SITE_DATA = {
       title: "Agri Sprayer Pump Battery",
       description: "Electric agricultural sprayer pump battery sales, repair & replacement. Keep your farm sprayers running through every season.",
       branch: "local",
-      branchLabel: "🏪 Azad Road Branch"
+      branchLabel: "Azad Road Branch"
     },
     {
       icon: "tractor",
@@ -93,7 +93,7 @@ const SITE_DATA = {
       title: "On-Field Tractor Installation",
       description: "We deliver and install heavy-duty batteries right at your farm. Mahindra, John Deere, Eicher — all covered. No need to bring the tractor.",
       branch: "both",
-      branchLabel: "✓ Both Branches"
+      branchLabel: "Both Branches"
     },
     {
       icon: "home",
@@ -101,7 +101,7 @@ const SITE_DATA = {
       title: "Inverter Sales & Setup",
       description: "Complete home inverter sales, installation, wiring & annual maintenance. Luminous, Exide — sizing, setup & water top-ups included.",
       branch: "local",
-      branchLabel: "🏪 Azad Road Branch"
+      branchLabel: "Azad Road Branch"
     },
     {
       icon: "wrench",
@@ -109,7 +109,7 @@ const SITE_DATA = {
       title: "Battery Repair & Service",
       description: "Battery health check, terminal cleaning, water topping, and repair for all brands. Walk in or call for doorstep service.",
       branch: "both",
-      branchLabel: "✓ Both Branches"
+      branchLabel: "Both Branches"
     },
     {
       icon: "truck",
@@ -117,7 +117,7 @@ const SITE_DATA = {
       title: "Doorstep Delivery",
       description: "Free delivery and installation within 20 km — Alnavar, Londa, Ramapur, Kakkeri, Mugad, Tamboor & surrounding villages.",
       branch: "both",
-      branchLabel: "✓ Both Branches"
+      branchLabel: "Both Branches"
     }
   ],
 
@@ -194,9 +194,10 @@ const SITE_DATA = {
   // ─── WHY CHOOSE US ───
   advantages: [
     { icon: "shield-check", title: "Authorized Dealer", text: "Official dealer for Exide, Amaron, SF & Luminous" },
-    { icon: "clock", title: "15+ Years", text: "Serving Alnavar since 2011 with trust" },
+    { icon: "clock", title: "Since 1994", text: "50+ years of battery expertise in Alnavar" },
     { icon: "repeat", title: "Best Exchange", text: "Top rates for old battery exchange" },
     { icon: "truck", title: "Free Delivery", text: "Doorstep delivery within 20 km radius" },
+    { icon: "award", title: "Legacy of Quality", text: "From handcrafting HR batteries to multi-brand dealer" },
     { icon: "map-pin", title: "2 Branches", text: "Highway + local — always accessible" }
   ],
 
@@ -205,24 +206,28 @@ const SITE_DATA = {
     {
       name: "Branch 1 — Goa Cross",
       tag: "highway",
-      tagLabel: "⚡ Highway Service",
+      tagLabel: "Highway Service",
+      tagIcon: "zap",
       address: "NH 67, Goa Cross, Alnavar, Dharwad District — 581103",
-      hours: "Mon–Sat: 9 AM – 8:30 PM · Sun: 10 AM – 2 PM",
+      hours: "Mon–Sun: 7:00 AM – 7:00 PM",
       phone: "+91 94486 67528",
       phoneLink: "+919448667528",
-      highlight: "🚗 Specializes in highway battery replacement, jump start service, emergency roadside assistance & quick car/bike battery swaps for travelers.",
+      highlight: "Specializes in highway battery replacement, jump start service, emergency roadside assistance & quick car/bike battery swaps for travelers.",
+      highlightIcon: "car",
       mapLink: "https://maps.google.com/?cid=1989083514408822554",
       mapEmbed: "https://maps.google.com/maps?cid=1989083514408822554&output=embed"
     },
     {
       name: "Branch 2 — Azad Road",
       tag: "local",
-      tagLabel: "🏪 Local Hub",
+      tagLabel: "Local Hub",
+      tagIcon: "store",
       address: "Azad Road, Alnavar Town, Dharwad District — 581103",
-      hours: "Mon–Sat: 9 AM – 8:30 PM · Sun: 10 AM – 2 PM",
+      hours: "Mon–Sun: 7:00 AM – 7:00 PM",
       phone: "+91 94486 67528",
       phoneLink: "+919448667528",
-      highlight: "🔧 Full-service hub — all battery sales, inverter installation, charging, agri sprayer pump service, rental batteries, repair & annual maintenance.",
+      highlight: "Full-service hub — all battery sales, inverter installation, charging, agri sprayer pump service, rental batteries, repair & annual maintenance.",
+      highlightIcon: "wrench",
       mapLink: "https://maps.google.com/maps?q=GK+Battery,+Azad+Road,+Alnavar,+Karnataka",
       mapEmbed: "https://maps.google.com/maps?q=GK+Battery,+Azad+Road,+Alnavar,+Karnataka&output=embed"
     }

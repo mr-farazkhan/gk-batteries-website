@@ -11,18 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
   document.title = D.profile.seo.title;
   document.querySelector('meta[name="description"]').content = D.profile.seo.description;
 
-  // --- TICKER ---
+  // --- TICKER (with icon prefix) ---
   const tickerTrack = document.getElementById('tickerTrack');
   if (tickerTrack) {
-    const items = D.ticker.map(t => `<span>${esc(t)}</span>`).join('');
-    tickerTrack.innerHTML = items + items; // duplicate for seamless loop
+    const tickerIcons = ['zap','battery-charging','phone','repeat','home','sprout'];
+    const items = D.ticker.map((t, i) => `<span><i data-lucide="${tickerIcons[i % tickerIcons.length]}"></i> ${esc(t)}</span>`).join('');
+    tickerTrack.innerHTML = items + items;
   }
 
   // --- NAV ---
   const navCall = document.getElementById('navCallBtn');
   if (navCall) { navCall.href = phone(); navCall.innerHTML = `<i data-lucide="phone"></i> Call Now`; }
   const mobileCall = document.getElementById('mobileCallLink');
-  if (mobileCall) { mobileCall.href = phone(); mobileCall.textContent = `📞 Call ${D.profile.phoneDisplay}`; }
+  if (mobileCall) { mobileCall.href = phone(); mobileCall.innerHTML = `<i data-lucide="phone"></i> Call ${D.profile.phoneDisplay}`; }
 
   // --- HERO ---
   const heroTitle = document.getElementById('heroTitle');
@@ -152,13 +153,13 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="loc-card fade-in">
         <div class="loc-card-head">
           <h3>${esc(loc.name)}</h3>
-          <span class="loc-tag ${loc.tag}">${esc(loc.tagLabel)}</span>
+          <span class="loc-tag ${loc.tag}"><i data-lucide="${loc.tagIcon || 'map-pin'}"></i> ${esc(loc.tagLabel)}</span>
         </div>
         <div class="loc-body">
           <div class="loc-row"><i data-lucide="map-pin"></i><span>${esc(loc.address)}</span></div>
           <div class="loc-row"><i data-lucide="clock"></i><span>${esc(loc.hours)}</span></div>
           <div class="loc-row"><i data-lucide="phone"></i><span>${esc(loc.phone)}</span></div>
-          <div class="loc-highlight">${esc(loc.highlight)}</div>
+          <div class="loc-highlight"><i data-lucide="${loc.highlightIcon || 'info'}"></i> ${esc(loc.highlight)}</div>
           <div class="loc-btns">
             <a href="tel:${loc.phoneLink}" class="loc-btn amber" rel="noopener"><i data-lucide="phone"></i> Call Now</a>
             <a href="${loc.mapLink}" target="_blank" class="loc-btn outline" rel="noopener noreferrer"><i data-lucide="navigation"></i> Get Directions</a>
@@ -190,28 +191,28 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  // --- FOOTER ---
+  // --- FOOTER (compact) ---
   const footerGrid = document.getElementById('footerGrid');
   if (footerGrid) {
     const socialHtml = [];
-    if (D.profile.socialLinks.facebook) socialHtml.push(`<a href="${D.profile.socialLinks.facebook}" target="_blank">Facebook</a>`);
-    if (D.profile.socialLinks.instagram) socialHtml.push(`<a href="${D.profile.socialLinks.instagram}" target="_blank">Instagram</a>`);
+    if (D.profile.socialLinks.facebook) socialHtml.push(`<a href="${D.profile.socialLinks.facebook}" target="_blank" rel="noopener noreferrer"><i data-lucide="facebook"></i> Facebook</a>`);
+    if (D.profile.socialLinks.instagram) socialHtml.push(`<a href="${D.profile.socialLinks.instagram}" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i> Instagram</a>`);
 
     footerGrid.innerHTML = `
       <div class="footer-brand-block">
-        <h3><img src="images/favicon.png" alt="GK"/> ${esc(D.profile.name)}</h3>
-        <p>Authorized Exide, Amaron, SF Batteries & Luminous dealer in Alnavar. Two branches serving the community since ${D.profile.sinceYear} with genuine products, expert service, and doorstep delivery.</p>
+        <h3><img src="images/favicon.png" alt="GK" width="28" height="28"/> ${esc(D.profile.name)}</h3>
+        <p>Multi-brand battery & inverter dealer in Alnavar since ${D.profile.sinceYear}. 50+ years of battery expertise.</p>
       </div>
-      <div class="footer-col"><h4>Quick Links</h4>
-        <a href="#services">Services</a><a href="#products">Products</a><a href="#locations">Branches</a><a href="${D.profile.googleReviewLink}" target="_blank">Leave Review</a>
-      </div>
-      <div class="footer-col"><h4>Services</h4>
-        ${D.services.slice(0, 5).map(s => `<a href="#services">${esc(s.title)}</a>`).join('')}
+      <div class="footer-col"><h4>Navigate</h4>
+        <a href="#services"><i data-lucide="wrench"></i> Services</a>
+        <a href="#products"><i data-lucide="battery-charging"></i> Products</a>
+        <a href="#locations"><i data-lucide="map-pin"></i> Branches</a>
+        <a href="${D.profile.googleReviewLink}" target="_blank" rel="noopener noreferrer"><i data-lucide="star"></i> Leave Review</a>
       </div>
       <div class="footer-col"><h4>Contact</h4>
-        <a href="${phone()}">📞 ${esc(D.profile.phoneDisplay)}</a>
+        <a href="${phone()}" rel="noopener"><i data-lucide="phone"></i> ${esc(D.profile.phoneDisplay)}</a>
         ${socialHtml.join('')}
-        <a href="${D.locations[0].mapLink}" target="_blank">📍 Directions</a>
+        <a href="${D.locations[0].mapLink}" target="_blank" rel="noopener noreferrer"><i data-lucide="navigation"></i> Directions</a>
       </div>
     `;
   }
