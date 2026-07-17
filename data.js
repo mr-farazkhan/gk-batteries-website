@@ -12,11 +12,11 @@ const SITE_DATA = {
     whatsapp: "919448667528",
     whatsappMessage: "Hi, I need battery enquiry",
     email: "",
-    sinceYear: 2011,
+    sinceYear: 1994,
     googleReviewLink: "https://g.page/r/CRpn7PDqpJobEBM/review",
     socialLinks: {
       facebook: "",
-      instagram: "",
+      instagram: "https://www.instagram.com/gk_batteries",
     },
     seo: {
       title: "GK Batteries Alnavar — Multi-Brand Battery & Inverter Dealer | Jump Start | Rental",
@@ -26,7 +26,7 @@ const SITE_DATA = {
 
   // ─── STATS (shown in hero) ───
   stats: [
-    { value: "15+", label: "Years Experience" },
+    { value: "50+", label: "Years Experience" },
     { value: "5000+", label: "Batteries Sold" },
     { value: "4.9★", label: "Google Rating" },
     { value: "2", label: "Branches" }
