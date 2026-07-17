@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Build brand tabs
     const brandSet = new Set();
     D.products.forEach(p => brandSet.add(p.brand));
-    const brandLabels = { exide: 'Exide', amaron: 'Amaron', sf: 'SF Sonic', luminous: 'Luminous' };
+    const brandLabels = { exide: 'Exide', amaron: 'Amaron', sf: 'SF Sonic', yokohama: 'Yokohama', dynex: 'Dynex' };
 
     filterTabs.innerHTML = `
       <div class="filter-row" role="tablist" aria-label="Filter by category">
@@ -191,27 +191,25 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  // --- FOOTER (compact) ---
-  const footerGrid = document.getElementById('footerGrid');
-  if (footerGrid) {
-    const socialHtml = [];
-    if (D.profile.socialLinks.facebook) socialHtml.push(`<a href="${D.profile.socialLinks.facebook}" target="_blank" rel="noopener noreferrer"><i data-lucide="facebook"></i> Facebook</a>`);
-    if (D.profile.socialLinks.instagram) socialHtml.push(`<a href="${D.profile.socialLinks.instagram}" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i> Instagram</a>`);
+  // --- FOOTER (compact single row) ---
+  const footerInner = document.getElementById('footerInner');
+  if (footerInner) {
+    const socialLinks = [];
+    if (D.profile.socialLinks.instagram) socialLinks.push(`<a href="${D.profile.socialLinks.instagram}" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i> Instagram</a>`);
+    if (D.profile.socialLinks.facebook) socialLinks.push(`<a href="${D.profile.socialLinks.facebook}" target="_blank" rel="noopener noreferrer"><i data-lucide="facebook"></i> Facebook</a>`);
 
-    footerGrid.innerHTML = `
-      <div class="footer-brand-block">
-        <h3><img src="images/favicon.png" alt="GK" width="28" height="28"/> ${esc(D.profile.name)}</h3>
-        <p>Multi-brand battery & inverter dealer in Alnavar since ${D.profile.sinceYear}. 50+ years of battery expertise.</p>
+    footerInner.innerHTML = `
+      <div class="footer-brand">
+        <img src="images/favicon.png" alt="GK" width="32" height="32"/>
+        <span>${esc(D.profile.name)}</span>
       </div>
-      <div class="footer-col"><h4>Navigate</h4>
+      <div class="footer-links">
         <a href="#services"><i data-lucide="wrench"></i> Services</a>
         <a href="#products"><i data-lucide="battery-charging"></i> Products</a>
         <a href="#locations"><i data-lucide="map-pin"></i> Branches</a>
-        <a href="${D.profile.googleReviewLink}" target="_blank" rel="noopener noreferrer"><i data-lucide="star"></i> Leave Review</a>
-      </div>
-      <div class="footer-col"><h4>Contact</h4>
         <a href="${phone()}" rel="noopener"><i data-lucide="phone"></i> ${esc(D.profile.phoneDisplay)}</a>
-        ${socialHtml.join('')}
+        ${socialLinks.join('')}
+        <a href="${D.profile.googleReviewLink}" target="_blank" rel="noopener noreferrer"><i data-lucide="star"></i> Review</a>
         <a href="${D.locations[0].mapLink}" target="_blank" rel="noopener noreferrer"><i data-lucide="navigation"></i> Directions</a>
       </div>
     `;

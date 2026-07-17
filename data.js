@@ -51,7 +51,7 @@ const SITE_DATA = {
   ],
 
   // ─── BRANDS ───
-  brands: ["EXIDE", "AMARON", "SF BATTERIES", "LUMINOUS"],
+  brands: ["EXIDE", "AMARON", "SF BATTERIES", "YOKOHAMA", "DYNEX"],
 
   // ─── SERVICES ───
   services: [
@@ -99,7 +99,7 @@ const SITE_DATA = {
       icon: "home",
       iconColor: "blue",
       title: "Inverter Sales & Setup",
-      description: "Complete home inverter sales, installation, wiring & annual maintenance. Luminous, Exide — sizing, setup & water top-ups included.",
+      description: "Complete home inverter sales, installation, wiring & annual maintenance. Exide, Amaron — sizing, setup & water top-ups included.",
       branch: "local",
       branchLabel: "Azad Road Branch"
     },
@@ -123,77 +123,172 @@ const SITE_DATA = {
 
   // ─── PRODUCTS ───
   products: [
+    // --- BIKE / TWO-WHEELER ---
     {
       category: "auto",
-      image: "images/car-battery.png",
-      title: "Exide Mileage Car Battery",
-      brand: "exide",
-      brandLabel: "EXIDE · 35Ah – 65Ah",
-      badge: "Best Seller",
-      badgeType: "popular",
-      features: ["36 Months Warranty", "Fits Maruti, Hyundai, Toyota", "Maintenance-free option"],
-      whatsappText: "Hi, price for Exide Mileage Car Battery"
-    },
-    {
-      category: "auto",
-      image: "images/car-battery.png",
-      title: "Amaron Go Car Battery",
-      brand: "amaron",
-      brandLabel: "AMARON · 35Ah – 80Ah",
-      badge: "",
-      badgeType: "",
-      features: ["40 Months Warranty", "Zero-maintenance, factory-charged", "Silver alloy technology"],
-      whatsappText: "Hi, price for Amaron Go Car Battery"
-    },
-    {
-      category: "auto",
-      image: "images/bike-battery.png",
+      image: "images/products/exide-bike.png",
       title: "Exide Xplore Bike Battery",
       brand: "exide",
       brandLabel: "EXIDE · 2.5Ah – 9Ah",
       badge: "",
       badgeType: "",
-      features: ["18 Months Warranty", "Fits Activa, Splendor, Pulsar", "Sealed maintenance-free"],
+      features: ["18 Months Warranty", "Fits Activa, Splendor, Pulsar, Jupiter", "Sealed maintenance-free (VRLA)"],
       whatsappText: "Hi, price for Exide Bike Battery"
     },
     {
+      category: "auto",
+      image: "images/products/amaron-bike.png",
+      title: "Amaron Pro Rider Bike Battery",
+      brand: "amaron",
+      brandLabel: "AMARON · 2.5Ah – 9Ah",
+      badge: "",
+      badgeType: "",
+      features: ["24 Months Warranty", "Zero-maintenance, factory-charged", "Fits all popular Indian 2-wheelers"],
+      whatsappText: "Hi, price for Amaron Bike Battery"
+    },
+    // --- CAR / SEDAN ---
+    {
+      category: "auto",
+      image: "images/products/exide-car.png",
+      title: "Exide Mileage Car Battery",
+      brand: "exide",
+      brandLabel: "EXIDE · 35Ah – 65Ah",
+      badge: "Best Seller",
+      badgeType: "popular",
+      features: ["36 Months Warranty", "Fits Maruti, Hyundai, Toyota, Honda", "Maintenance-free option available"],
+      whatsappText: "Hi, price for Exide Car Battery"
+    },
+    {
+      category: "auto",
+      image: "images/products/amaron-car.png",
+      title: "Amaron Go Car Battery",
+      brand: "amaron",
+      brandLabel: "AMARON · 35Ah – 80Ah",
+      badge: "",
+      badgeType: "",
+      features: ["40 Months Warranty", "Zero-maintenance, factory-charged", "Silver alloy technology for longer life"],
+      whatsappText: "Hi, price for Amaron Car Battery"
+    },
+    {
+      category: "auto",
+      image: "images/products/yokohama-car.png",
+      title: "Yokohama MF Car Battery",
+      brand: "yokohama",
+      brandLabel: "YOKOHAMA · 35Ah – 75Ah",
+      badge: "Value Pick",
+      badgeType: "exchange",
+      features: ["30 Months Warranty", "Japanese technology, Indian price", "Fits all popular car models"],
+      whatsappText: "Hi, price for Yokohama Car Battery"
+    },
+    // --- SUV / MUV ---
+    {
+      category: "auto",
+      image: "images/products/exide-suv.png",
+      title: "Exide Matrix SUV Battery",
+      brand: "exide",
+      brandLabel: "EXIDE · 65Ah – 100Ah",
+      badge: "",
+      badgeType: "",
+      features: ["42 Months Warranty", "Fits Scorpio, Innova, XUV, Fortuner", "High cranking power for diesel engines"],
+      whatsappText: "Hi, price for Exide SUV Battery"
+    },
+    {
+      category: "auto",
+      image: "images/products/amaron-suv.png",
+      title: "Amaron Fresh SUV Battery",
+      brand: "amaron",
+      brandLabel: "AMARON · 65Ah – 105Ah",
+      badge: "",
+      badgeType: "",
+      features: ["48 Months Warranty", "BIC technology for extreme heat", "Fits all popular SUV/MUV models"],
+      whatsappText: "Hi, price for Amaron SUV Battery"
+    },
+    // --- TRACTOR / COMMERCIAL ---
+    {
       category: "tractor",
-      image: "images/tractor-battery-prod.png",
+      image: "images/products/exide-tractor.png",
+      title: "Exide Heavy Vehicle / Tractor Battery",
+      brand: "exide",
+      brandLabel: "EXIDE · 100Ah – 180Ah",
+      badge: "Heavy Duty",
+      badgeType: "exchange",
+      features: ["36 Months Warranty", "Mahindra, Swaraj, Eicher, TAFE", "Extra vibration resistance for rough terrain"],
+      whatsappText: "Hi, price for Exide Tractor Battery"
+    },
+    {
+      category: "tractor",
+      image: "images/products/amaron-tractor.png",
       title: "Amaron Hi-Way Tractor Battery",
       brand: "amaron",
       brandLabel: "AMARON · 100Ah – 200Ah",
-      badge: "Heavy Duty",
-      badgeType: "exchange",
-      features: ["48 Months Warranty", "Mahindra, John Deere, Eicher", "On-field installation available"],
-      whatsappText: "Hi, price for Amaron Tractor Battery"
-    },
-    {
-      category: "tractor",
-      image: "images/tractor-battery-prod.png",
-      title: "Exide Heavy Vehicle Battery",
-      brand: "exide",
-      brandLabel: "EXIDE · 100Ah – 180Ah",
       badge: "",
       badgeType: "",
-      features: ["36 Months Warranty", "Trucks, tempos, commercial", "Extra vibration resistance"],
-      whatsappText: "Hi, price for Exide Heavy Vehicle Battery"
+      features: ["48 Months Warranty", "John Deere, Mahindra, Eicher", "On-field installation available"],
+      whatsappText: "Hi, price for Amaron Tractor Battery"
     },
+    // --- TRUCK ---
+    {
+      category: "tractor",
+      image: "images/products/dynex-truck.png",
+      title: "Dynex Truck & Heavy Vehicle Battery",
+      brand: "dynex",
+      brandLabel: "DYNEX · 130Ah – 200Ah",
+      badge: "Commercial",
+      badgeType: "exchange",
+      features: ["30 Months Warranty", "Tata, Ashok Leyland, BharatBenz", "High reserve capacity for long hauls"],
+      whatsappText: "Hi, price for Dynex Truck Battery"
+    },
+    // --- E-RICKSHAW ---
+    {
+      category: "tractor",
+      image: "images/products/exide-erickshaw.png",
+      title: "Exide E-Rickshaw Battery",
+      brand: "exide",
+      brandLabel: "EXIDE · 100Ah – 130Ah Tubular",
+      badge: "",
+      badgeType: "",
+      features: ["36 Months Warranty", "Deep-cycle tubular design", "High charge acceptance for daily use"],
+      whatsappText: "Hi, price for Exide E-Rickshaw Battery"
+    },
+    // --- INVERTER ---
     {
       category: "inverter",
-      image: "images/inverter-battery.png",
-      title: "Luminous 150Ah Inverter Battery",
-      brand: "luminous",
-      brandLabel: "LUMINOUS · Tall Tubular",
+      image: "images/products/exide-inverter.png",
+      title: "Exide Inva Master Inverter Battery",
+      brand: "exide",
+      brandLabel: "EXIDE · 100Ah – 200Ah Tubular",
       badge: "Popular",
       badgeType: "popular",
       features: ["48 Months Warranty", "Long backup — fans, lights, TV", "Free installation in Alnavar"],
-      whatsappText: "Hi, price for Luminous 150Ah Inverter"
+      whatsappText: "Hi, price for Exide Inverter Battery"
+    },
+    {
+      category: "inverter",
+      image: "images/products/amaron-inverter.png",
+      title: "Amaron Current Inverter Battery",
+      brand: "amaron",
+      brandLabel: "AMARON · 135Ah – 200Ah Tall Tubular",
+      badge: "",
+      badgeType: "",
+      features: ["48 Months Warranty", "Patented Silica Gel technology", "Top-up intervals up to 18 months"],
+      whatsappText: "Hi, price for Amaron Inverter Battery"
+    },
+    {
+      category: "inverter",
+      image: "images/products/dynex-inverter.png",
+      title: "Dynex Tall Tubular Inverter Battery",
+      brand: "dynex",
+      brandLabel: "DYNEX · 150Ah – 220Ah Tubular",
+      badge: "Budget Pick",
+      badgeType: "exchange",
+      features: ["36 Months Warranty", "Affordable tall tubular option", "Consistent backup performance"],
+      whatsappText: "Hi, price for Dynex Inverter Battery"
     }
   ],
 
   // ─── WHY CHOOSE US ───
   advantages: [
-    { icon: "shield-check", title: "Authorized Dealer", text: "Official dealer for Exide, Amaron, SF & Luminous" },
+    { icon: "shield-check", title: "Authorized Dealer", text: "Official dealer for Exide, Amaron, SF & Yokohama" },
     { icon: "clock", title: "Since 1994", text: "50+ years of battery expertise in Alnavar" },
     { icon: "repeat", title: "Best Exchange", text: "Top rates for old battery exchange" },
     { icon: "truck", title: "Free Delivery", text: "Doorstep delivery within 20 km radius" },
