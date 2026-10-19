@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     whyGrid.innerHTML = D.advantages.map(a => `
       <div class="why-card fade-in">
         <div class="why-icon">${ico(a.icon)}</div>
-        <h4>${esc(a.title)}</h4>
+        <h3>${esc(a.title)}</h3>
         <p>${esc(a.text)}</p>
       </div>
     `).join('');

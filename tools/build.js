@@ -457,6 +457,16 @@ function main() {
   const md = path.join(ROOT, 'gk-batteries.md');
   fs.writeFileSync(md, buildMarkdown(D), 'utf8');
   console.log('[build] gk-batteries.md written');
+
+  // keep the copyright year fresh on the static pages (no inline JS -> CSP-safe)
+  const year = String(new Date().getFullYear());
+  ['privacy.html', '404.html'].forEach(f => {
+    const fp = path.join(ROOT, f);
+    if (!fs.existsSync(fp)) return;
+    const cur = fs.readFileSync(fp, 'utf8');
+    const next = cur.replace(/\{\{YEAR\}\}/g, year);
+    if (next !== cur) { fs.writeFileSync(fp, next, 'utf8'); console.log('[build] ' + f + ' year updated'); }
+  });
 }
 
 try {
