@@ -146,6 +146,35 @@ ul{list-style:none}
 .value-card h4{font-family:var(--font-head);font-size:1rem;font-weight:600;margin-bottom:6px}
 .value-card p{font-size:.84rem;color:var(--text2);line-height:1.6}
 
+/* --- SERVICE AREA --- */
+.sa-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:1000px;margin:0 auto}
+.sa-item{display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);transition:all .3s}
+.sa-item:hover{border-color:rgba(245,158,11,.35);transform:translateX(3px)}
+.sa-tag{font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0}
+.sa-tag.hub{background:rgba(245,158,11,.15);color:var(--amber);border:1px solid rgba(245,158,11,.3)}
+.sa-tag.free{background:rgba(34,197,94,.12);color:#4ade80;border:1px solid rgba(34,197,94,.25)}
+.sa-tag.order{background:rgba(59,130,246,.12);color:#60a5fa;border:1px solid rgba(59,130,246,.25)}
+.sa-name{font-family:var(--font-head);font-size:.95rem;font-weight:600;white-space:nowrap}
+.sa-dist{font-family:var(--font-num);font-size:.72rem;color:var(--amber);background:rgba(245,158,11,.1);border-radius:6px;padding:2px 8px;white-space:nowrap}
+.sa-note{font-size:.76rem;color:var(--text3);margin-left:auto;text-align:right;line-height:1.4}
+.sa-cta{max-width:1000px;margin:28px auto 0;padding:20px 24px;background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.sa-cta p{font-size:.9rem;color:var(--text2);display:flex;align-items:center;gap:8px;flex:1;min-width:260px}
+.sa-cta p svg{width:18px;height:18px;color:var(--amber);flex-shrink:0}
+
+/* --- FAQ --- */
+.faq-list{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.faq-item{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);overflow:hidden;transition:border-color .3s}
+.faq-item[open]{border-color:rgba(245,158,11,.3)}
+.faq-q{list-style:none;cursor:pointer;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-head);font-size:1rem;font-weight:600;line-height:1.45}
+.faq-q::-webkit-details-marker{display:none}
+.faq-q:hover{color:var(--amber)}
+.faq-q svg{width:20px;height:20px;color:var(--amber);flex-shrink:0;transition:transform .3s}
+.faq-item[open] .faq-q svg{transform:rotate(180deg)}
+.faq-a{padding:0 22px 20px;border-top:1px solid var(--glass-border);padding-top:16px;margin:0 0 0}
+.faq-a p{font-size:.92rem;color:var(--text2);line-height:1.75}
+.faq-cta{max-width:900px;margin:28px auto 0;padding:20px 24px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.faq-cta p{font-size:.9rem;color:var(--text2);flex:1;min-width:260px}
+
 /* --- SERVICES --- */
 .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .svc-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:32px 24px;transition:all .4s;position:relative;overflow:hidden}
@@ -316,6 +345,11 @@ ul{list-style:none}
   .about-story,.about-timeline-card{padding:24px 20px}
   .about-legacy{grid-template-columns:repeat(2,1fr)}
   .about-values{grid-template-columns:1fr}
+  .sa-list{grid-template-columns:1fr}
+  .sa-note{margin-left:0;text-align:left;flex-basis:100%}
+  .sa-item{flex-wrap:wrap}
+  .faq-q{font-size:.95rem;padding:15px 16px}
+  .faq-a{padding:0 16px 16px}
   .svc-grid{grid-template-columns:1fr}
   .why-grid{grid-template-columns:repeat(2,1fr)}
   .prod-grid{grid-template-columns:1fr}

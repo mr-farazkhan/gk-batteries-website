@@ -5,7 +5,7 @@ const SITE_DATA = {
   profile: {
     name: "GK Batteries",
     tagline: "Your Trusted Power Partner in Alnavar",
-    description: "Multi-brand battery & inverter dealer with 50+ years of expertise. From handcrafting HR batteries to becoming Alnavar's most trusted authorized dealer for Exide, Amaron, SF & Luminous — we've powered this community since 1994.",
+    description: "Multi-brand battery & inverter dealer in Alnavar with 50+ years of expertise. From handcrafting hard-rubber (HR) batteries to becoming Alnavar's most trusted authorized dealer for Exide, Amaron, SF, Yokohama & Dynex — we've powered this community since 1994.",
     phone: "+919448667528",
     phoneDisplay: "94486 67528",
     email: "",
@@ -16,8 +16,30 @@ const SITE_DATA = {
       instagram: "https://www.instagram.com/gk_batteries",
     },
     seo: {
-      title: "GK Batteries Alnavar — Multi-Brand Battery & Inverter Dealer | Jump Start | Rental",
-      description: "GK Batteries Alnavar — Exide, Amaron, SF, Yokohama & Dynex dealer. Car, SUV, tractor, bike, truck, e-rickshaw, inverter batteries. Jump start, rental battery, agri sprayer pump service. Two branches in Alnavar."
+      title: "GK Batteries Alnavar — Car, Inverter & Tractor Battery Dealer | Jump Start 24/7",
+      description: "GK Batteries Alnavar — authorized Exide, Amaron, SF, Yokohama & Dynex dealer. Car, bike, SUV, tractor, truck, e-rickshaw & inverter batteries, old battery exchange, rental battery, jump start on NH-67. Two branches in Alnavar. Call 94486 67528.",
+      keywords: [
+        "car battery shop Alnavar",
+        "car battery Alnavar",
+        "inverter battery Alnavar",
+        "inverter battery Dharwad",
+        "tubular battery Dharwad",
+        "bike battery Alnavar",
+        "tractor battery Dharwad",
+        "truck battery Dharwad",
+        "e-rickshaw battery Dharwad",
+        "battery shop near me Alnavar",
+        "battery shop Londa",
+        "battery shop Belgaum",
+        "Exide battery dealer Alnavar",
+        "Amaron battery Alnavar",
+        "jump start service NH 67",
+        "battery exchange Alnavar",
+        "battery rental Alnavar",
+        "home inverter battery installation Alnavar",
+        "GK Batteries Alnavar",
+        "Gous Khan GK Batteries"
+      ]
     }
   },
 
@@ -354,6 +376,101 @@ const SITE_DATA = {
     { icon: "truck", title: "Free Delivery", text: "Doorstep delivery within 20 km radius" },
     { icon: "award", title: "Legacy of Quality", text: "From handcrafting HR batteries to multi-brand dealer" },
     { icon: "map-pin", title: "2 Branches", text: "Highway + local — always accessible" }
+  ],
+
+  // ─── SERVICE AREA (local SEO — towns we deliver & service) ───
+  serviceArea: {
+    title: "We Deliver & Service Batteries Across the Alnavar–Belgaum–Goa Belt",
+    intro: "From our Alnavar branches we deliver, install and jump-start batteries across Dharwad district and the NH-67 corridor. Free delivery and installation within 20 km; other towns on order.",
+    items: [
+      { name: "Alnavar", distance: "0 km", note: "Both branches — Goa Cross (NH-67) & Azad Road", tag: "hub" },
+      { name: "Ramapur", distance: "5 km", note: "Free doorstep delivery & installation", tag: "free" },
+      { name: "Mugad", distance: "7 km", note: "Free doorstep delivery & installation", tag: "free" },
+      { name: "Kakkeri", distance: "9 km", note: "Free doorstep delivery & installation", tag: "free" },
+      { name: "Tamboor", distance: "11 km", note: "Free doorstep delivery & installation", tag: "free" },
+      { name: "Londa", distance: "14 km", note: "NH-67 highway route — jump start & instant swap", tag: "free" },
+      { name: "Khanapur", distance: "18 km", note: "Free doorstep delivery & installation", tag: "free" },
+      { name: "Bailhongal", distance: "25 km", note: "Delivery on order, same-day on request", tag: "order" },
+      { name: "Dharwad", distance: "30 km", note: "Delivery on order — car & inverter batteries", tag: "order" },
+      { name: "Hubli", distance: "42 km", note: "Delivery on order — commercial & inverter", tag: "order" },
+      { name: "Belgaum (Belagavi)", distance: "42 km", note: "Delivery on order — bulk & dealer rates", tag: "order" },
+      { name: "Gadag", distance: "65 km", note: "Delivery on order", tag: "order" },
+      { name: "Goa — Ponda, Panaji, Vasco", distance: "78 km", note: "Delivery on order — highway jump start en route", tag: "order" },
+      { name: "Kolhapur", distance: "145 km", note: "Delivery on order for bulk & dealer enquiries", tag: "order" }
+    ]
+  },
+
+  // ─── FAQ (AEO — answer-first questions for Google & AI answers) ───
+  faq: {
+    title: "Battery Questions, Answered",
+    intro: "Straight answers about batteries, prices, delivery and service in Alnavar.",
+    items: [
+      {
+        q: "Which is the best battery shop in Alnavar for car batteries?",
+        a: "GK Batteries is an authorized multi-brand battery dealer with two branches in Alnavar — the highway branch at NH-67, Goa Cross and the local hub on Azad Road. We stock Exide, Amaron, SF, Yokohama and Dynex batteries for two-wheelers, cars, SUVs, tractors, trucks and e-rickshaws, with free doorstep installation within 20 km and old-battery exchange at fair rates. Call 94486 67528 for the best price."
+      },
+      {
+        q: "How much does a car battery cost in Alnavar?",
+        a: "A new car battery in Alnavar usually runs from about ₹4,500 for a 35Ah maintenance-free unit up to ₹16,000 for a 100Ah tubular or SUV battery, depending on brand, capacity and warranty. The final price also depends on your vehicle and the old battery you exchange. Call 94486 67528 for an exact same-day quote — we quote before we deliver."
+      },
+      {
+        q: "Do you sell inverter batteries for home backup in Alnavar?",
+        a: "Yes. We stock tubular and maintenance-free inverter batteries from 100Ah to 220Ah (Exide Inva Master, Amaron Current, Dynex and SF) for homes, shops and offices. We size the battery to your load, deliver it, install the terminals, do the wiring and set up a water-top-up schedule. Installation is free in Alnavar."
+      },
+      {
+        q: "Which inverter battery is best for a 2 BHK home in Alnavar?",
+        a: "For a typical 2 BHK running fans, lights, TV and a few appliances, a 150–180Ah tall tubular battery gives roughly 3 to 5 hours of backup, while 200Ah or more suits longer outages or heavier loads. In Alnavar, where outages are common, we usually recommend a tall tubular over a maintenance-free unit because it lasts longer. Send us your load and we will size it free of charge."
+      },
+      {
+        q: "Do you provide jump start service on NH-67?",
+        a: "Yes — our Goa Cross branch sits on NH-67 for exactly this reason. A dead battery on the highway between Alnavar, Londa and Goa is a quick job for us. Call 94486 67528 and we will reach you with a jump pack and a replacement battery, day or night, for cars, bikes and commercial vehicles."
+      },
+      {
+        q: "Do you deliver batteries to Londa, Ramapur, Kakkeri and nearby villages?",
+        a: "Yes. We deliver and install free within a 20 km radius of Alnavar, which covers Londa, Ramapur, Kakkeri, Mugad, Tamboor and Khanapur. For Dharwad, Hubli, Belgaum, Gadag and the Goa belt, delivery is available on order. Call us with your location and we will confirm the timing."
+      },
+      {
+        q: "Do you accept old batteries in exchange?",
+        a: "Yes, and we quote the exchange value before we remove anything. The value depends on the battery's age, brand and condition, and it is applied as a discount against your new purchase. We accept old car, bike, tractor, inverter and e-rickshaw batteries."
+      },
+      {
+        q: "What is the difference between a hard-rubber battery and a modern battery?",
+        a: "Hard-rubber (HR) batteries used a rubber casing with hard-rubber separators — they were heavy, needed frequent water top-ups and had a shorter life. Modern batteries use poly-cased bodies, improved lead-acid chemistry, tubular or maintenance-free plates (VRLA) and last far longer with almost no maintenance. GK Batteries began by hand-building HR batteries more than 50 years ago and moved with the material shift to modern chemistry."
+      },
+      {
+        q: "How long does a car battery last?",
+        a: "A good car battery lasts 3 to 5 years in Indian heat, 2 to 3 years for a two-wheeler, and 4 to 6 years for a tubular inverter battery that gets regular water top-ups. If your car struggles to start, the lights dim at idle, or the battery is over three years old, get a free health check at either branch."
+      },
+      {
+        q: "Do you repair and charge batteries, or only sell new ones?",
+        a: "Both. We run battery health checks, terminal cleaning, water top-ups, slow and fast charging and re-conditioning of old batteries at the Azad Road branch. We also rent batteries for weddings, functions and emergencies, and service agri sprayer pump and e-rickshaw batteries."
+      },
+      {
+        q: "Do you sell tractor, truck and e-rickshaw batteries?",
+        a: "Yes. We stock 100Ah to 200Ah heavy-duty batteries for Mahindra, Swaraj, John Deere, Eicher and TAFE tractors, 130Ah to 200Ah for trucks and commercial vehicles, and deep-cycle tubular batteries for e-rickshaws. For tractors we deliver and install at your farm — you do not need to bring the vehicle in."
+      },
+      {
+        q: "What are your timings, address and branch locations?",
+        a: "GK Batteries is open Monday to Sunday, 7:00 AM to 7:00 PM, at two branches in Alnavar, Dharwad District, Karnataka 581103 — the highway branch at NH-67, Goa Cross, and the local hub on Azad Road. Call 94486 67528 for directions or an immediate price."
+      }
+    ]
+  },
+
+  // ─── TRUST / GUARANTEE STRIP ───
+  trust: [
+    { icon: "badge-check", title: "100% Genuine", text: "Authorised Exide, Amaron, SF, Yokohama & Dynex stock with brand warranty" },
+    { icon: "repeat", title: "Fair Exchange", text: "Old battery value quoted before removal, applied as instant discount" },
+    { icon: "truck", title: "Free Delivery", text: "Delivery and installation free within 20 km of Alnavar" },
+    { icon: "wrench", title: "Free Health Check", text: "Battery testing, terminal cleaning and water top-up at no charge" }
+  ],
+
+  // ─── CUSTOMER REVIEWS (swap in real quotes — placeholder samples) ───
+  // ⚠ Replace with genuine Google reviews before publishing.
+  reviews: [
+    { name: "Prakash K.", location: "Alnavar", rating: 5, text: "Stranded on NH-67 with a dead battery at 9 PM. They reached me in 20 minutes with a jump start and installed a new Exide the same night. Genuinely saved my trip." },
+    { name: "Shivanand P.", location: "Ramapur", rating: 5, text: "Bought an Amaron inverter battery for my shop. They came to the shop, did the wiring, explained the water top-up schedule and did not charge extra for installation. Very honest dealing." },
+    { name: "Anita M.", location: "Londa", rating: 5, text: "We use their service every season for our sprayer pump batteries. They deliver to the farm and the price is exactly what was quoted on the phone. Rare these days." },
+    { name: "Ravi Kulkarni", location: "Alnavar", rating: 5, text: "Third generation running my tractor on their batteries since my father's time. Exchange rate was fair and the old battery was valued properly in front of me." }
   ],
 
   // ─── LOCATIONS ───

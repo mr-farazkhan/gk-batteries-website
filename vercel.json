@@ -1,5 +1,18 @@
 {
+  "buildCommand": "node tools/build.js",
+  "outputDirectory": ".",
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(self)" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' https://unpkg.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://maps.google.com https://maps.gstatic.com https://www.google.com; frame-src https://maps.google.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://*.google-analytics.com; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; object-src 'none'" },
+        { "key": "Link", "value": "</llms.txt>; rel=\"describedby\", </gk-batteries.md>; rel=\"alternate\"; type=\"text/markdown\"" }
+      ]
+    },
     {
       "source": "/images/(.*)",
       "headers": [
@@ -22,12 +35,17 @@
       ]
     },
     {
-      "source": "/(.*)",
+      "source": "/(llms.txt|gk-batteries.md|robots.txt)",
       "headers": [
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(self)" }
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
       ]
     }
   ],
