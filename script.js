@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p class="p-brand ${p.brand}">${esc(p.brandLabel)}</p>
           <ul class="p-features">${p.features.map(f => `<li><i data-lucide="check"></i>${esc(f)}</li>`).join('')}</ul>
           <div class="p-exchange"><i data-lucide="repeat"></i> Old Battery Exchange Discount</div>
-          <a href="${phone()}" class="p-call" rel="noopener"><i data-lucide="phone"></i> Call to Enquire</a>
+          <a href="${phone()}" class="p-call" rel="noopener" data-track="product_enquire" data-product="${esc(p.title)}"><i data-lucide="phone"></i> Call to Enquire</a>
         </div>
       </div>
     `).join('');
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="review-cta-icon"><i data-lucide="star"></i></div>
         <h3>Loved Our Service? Leave Us a Review!</h3>
         <p>Your 5-star Google review helps local customers find reliable battery service in Alnavar.</p>
-        <a href="${D.profile.googleReviewLink}" target="_blank" class="google-btn" id="googleReviewBtn">
+        <a href="${D.profile.googleReviewLink}" target="_blank" class="google-btn" id="googleReviewBtn" data-track="review_cta_button">
           <i data-lucide="star"></i> Write a Google Review
         </a>
         <div class="review-cta-contact">
@@ -237,9 +237,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- FOOTER (compact single row) ---
   const footerInner = document.getElementById('footerInner');
   if (footerInner) {
+    // Lucide dropped brand icons in v1 — Instagram/Facebook use inline SVG marks.
+    const igSvg = '<svg class="brand-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>';
+    const fbSvg = '<svg class="brand-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>';
     const socialLinks = [];
-    if (D.profile.socialLinks.instagram) socialLinks.push(`<a href="${D.profile.socialLinks.instagram}" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i> Instagram</a>`);
-    if (D.profile.socialLinks.facebook) socialLinks.push(`<a href="${D.profile.socialLinks.facebook}" target="_blank" rel="noopener noreferrer"><i data-lucide="facebook"></i> Facebook</a>`);
+    if (D.profile.socialLinks.instagram) socialLinks.push(`<a href="${D.profile.socialLinks.instagram}" target="_blank" rel="noopener noreferrer" data-track="social_instagram">${igSvg} Instagram</a>`);
+    if (D.profile.socialLinks.facebook) socialLinks.push(`<a href="${D.profile.socialLinks.facebook}" target="_blank" rel="noopener noreferrer" data-track="social_facebook">${fbSvg} Facebook</a>`);
 
     footerInner.innerHTML = `
       <div class="footer-brand">

@@ -262,6 +262,18 @@ ul{list-style:none}
 .footer-links a:hover{color:var(--amber)}
 .footer-bottom{border-top:1px solid var(--glass-border);padding-top:16px;text-align:center;font-size:.78rem;color:var(--text3)}
 
+/* --- CONSENT BANNER --- */
+.consent-banner{position:fixed;left:20px;bottom:20px;z-index:1000;max-width:460px;background:var(--surface);border:1px solid rgba(245,158,11,.35);border-radius:var(--radius-lg);box-shadow:0 18px 45px rgba(0,0,0,.55);opacity:1;transform:translateY(0);transition:opacity .35s ease,transform .35s ease}
+.consent-banner.hide{opacity:0;transform:translateY(16px);pointer-events:none}
+.consent-inner{padding:18px 20px}
+.consent-text{display:flex;gap:10px;align-items:flex-start;font-size:.84rem;color:var(--text2);line-height:1.6;margin-bottom:14px}
+.consent-text svg{width:18px;height:18px;color:var(--amber);flex-shrink:0;margin-top:2px}
+.consent-btns{display:flex;gap:10px;justify-content:flex-end}
+.consent-btn{padding:9px 22px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;border:1px solid var(--glass-border);background:transparent;color:var(--text2);font-family:var(--font-body);transition:all .25s}
+.consent-btn.accept{background:var(--amber);color:#000;border-color:var(--amber);box-shadow:0 0 18px var(--amber-glow)}
+.consent-btn.accept:hover{box-shadow:0 0 26px var(--amber-glow);transform:translateY(-1px)}
+.consent-btn.decline:hover{border-color:var(--amber);color:var(--amber)}
+
 /* --- FLOATING CALL BUTTON --- */
 .call-float{position:fixed;bottom:24px;right:24px;z-index:999;width:60px;height:60px;background:var(--amber);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px var(--amber-glow);transition:all .3s;animation:callPulse 2s infinite}
 .call-float:hover{transform:scale(1.1);box-shadow:0 6px 30px var(--amber-glow)}
@@ -310,6 +322,7 @@ ul{list-style:none}
   .loc-grid{grid-template-columns:1fr}
   .sec-header h2{font-size:1.8rem}
   .emergency-text{font-size:1.2rem}
+  .consent-banner{left:12px;right:12px;bottom:88px;max-width:none}
   .footer-links{flex-direction:column;gap:10px}
 }
 @media(max-width:480px){
@@ -320,6 +333,10 @@ ul{list-style:none}
   .why-grid{grid-template-columns:1fr 1fr}
   .stat-num{font-size:1.6rem}
   .emergency-inner{flex-direction:column;gap:12px}
+  .consent-banner{left:12px;right:12px;bottom:80px;max-width:none}
+  .consent-inner{padding:14px 16px}
+  .consent-btns{flex-direction:row-reverse}
+  .consent-btn{flex:1;text-align:center;padding:10px 12px}
   .about-lead{font-size:.94rem;padding-left:12px}
   .about-prose p{font-size:.88rem}
   .legacy-num{font-size:1.1rem}

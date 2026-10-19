@@ -1,7 +1,6 @@
 /* ===== GK BATTERIES — SITE DATA (Edit this file to update website content) ===== */
 
 const SITE_DATA = {
-
   // ─── SHOP PROFILE ───
   profile: {
     name: "GK Batteries",
@@ -20,6 +19,19 @@ const SITE_DATA = {
       title: "GK Batteries Alnavar — Multi-Brand Battery & Inverter Dealer | Jump Start | Rental",
       description: "GK Batteries Alnavar — Exide, Amaron, SF, Yokohama & Dynex dealer. Car, SUV, tractor, bike, truck, e-rickshaw, inverter batteries. Jump start, rental battery, agri sprayer pump service. Two branches in Alnavar."
     }
+  },
+
+  // ─── ANALYTICS ───
+  // 1. Paste your Google Analytics 4 Measurement ID here (Analytics → Admin → Data Streams).
+  //    Format: "G-XXXXXXXXXX". Leave empty to keep GA4 off.
+  // 2. Vercel Web Analytics: click "Enable" in the Vercel dashboard → Analytics, then deploy.
+  //    The script path is auto-added by Vercel at /_vercel/insights/script.js
+  // 3. Region data: see ANALYTICS.md for the step-by-step guide.
+  analytics: {
+    gaId: "",                                  // ← paste your GA4 ID, e.g. "G-XXXXXXXXXX"
+    vercelPath: "/_vercel/insights/script.js", // Vercel Web Analytics script
+    vercelAlwaysOn: true,                      // cookie-free Vercel analytics loads even before consent
+    consentExpiryDays: 180                     // re-ask for consent after this many days
   },
 
   // ─── STATS (shown in hero) ───
@@ -51,8 +63,7 @@ const SITE_DATA = {
   // ─── BRANDS ───
   brands: ["EXIDE", "AMARON", "SF BATTERIES", "YOKOHAMA", "DYNEX"],
 
-  // ─── ABOUT / OWNER JOURNEY ───
-  // ⚠ FACT CHECK BEFORE PUBLISHING — edit the values below (all in ONE place):
+  // ─── ABOUT / OWNER JOURNEY ───  // ⚠ FACT CHECK BEFORE PUBLISHING — edit the values below (all in ONE place):
   //   1. FOUNDING YEAR  → profile.sinceYear is 1994, but "50+ years" implies ~1976.
   //      social_media.txt says "since 2011". Pick one and make the whole site match.
   //   2. milestone[0].years  → year hard-rubber (HR) battery making began.
@@ -377,3 +388,6 @@ const SITE_DATA = {
     }
   ]
 };
+
+// Expose to other scripts (analytics.js) and the browser console.
+window.SITE_DATA = SITE_DATA;
