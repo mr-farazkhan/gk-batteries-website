@@ -1,23 +1,23 @@
 {
   "name": "gk-batteries",
   "version": "1.0.0",
-  "description": "",
-  "main": "analytics.js",
+  "description": "GK Batteries Alnavar — multi-brand battery & inverter dealer website (static, Vercel)",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node tools/build.js",
+    "sprite": "node tools/make-sprite.js",
+    "images": "python tools/optimize-images.py",
+    "og": "python tools/make-images.py",
+    "serve": "python -m http.server 8123",
+    "check": "node --check script.js && node --check data.js && node --check analytics.js && node tools/build.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mr-farazkhan/gk-batteries-website.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/mr-farazkhan/gk-batteries-website/issues"
-  },
-  "homepage": "https://github.com/mr-farazkhan/gk-batteries-website#readme",
   "devDependencies": {
     "lucide": "^1.59.0"
   }

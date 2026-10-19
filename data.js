@@ -10,6 +10,9 @@ const SITE_DATA = {
     phoneDisplay: "94486 67528",
     email: "",
     sinceYear: 1994,
+    // Google aggregate rating markup — set `count` to your real Google review count
+    // to enable the star rating in search results. Left at 0 (markup omitted) until then.
+    rating: { value: "4.9", count: 0 },
     googleReviewLink: "https://g.page/r/CRpn7PDqpJobEBM/review",
     socialLinks: {
       facebook: "",

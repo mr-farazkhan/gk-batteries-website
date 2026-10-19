@@ -8,6 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   const ico = (name) => `<svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-${name}"></use></svg>`;
 
+  // Analytics bridge — analytics.js exposes GKAnalytics; guard for safety.
+  const trackEvent = (name, params) => {
+    if (window.GKAnalytics && typeof window.GKAnalytics.track === 'function') {
+      window.GKAnalytics.track(name, params);
+    }
+  };
+
   // --- SEO ---
   document.title = D.profile.seo.title;
   document.querySelector('meta[name="description"]').content = D.profile.seo.description;
@@ -149,14 +156,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const brandLabels = { exide: 'Exide', amaron: 'Amaron', sf: 'SF Sonic', yokohama: 'Yokohama', dynex: 'Dynex' };
 
     filterTabs.innerHTML = `
-      <div class="filter-row" role="tablist" aria-label="Filter by category">
+      <div class="filter-row" role="group" aria-label="Filter products by category">
         <span class="filter-label">Category:</span>
-        ${cats.map((c, i) => `<button class="f-tab${i === 0 ? ' active' : ''}" data-filter="cat" data-val="${c.key}">${esc(c.label)}</button>`).join('')}
+        ${cats.map((c, i) => `<button type="button" class="f-tab${i === 0 ? ' active' : ''}" data-filter="cat" data-val="${c.key}" aria-pressed="${i === 0}">${esc(c.label)}</button>`).join('')}
       </div>
-      <div class="filter-row" role="tablist" aria-label="Filter by brand">
+      <div class="filter-row" role="group" aria-label="Filter products by brand">
         <span class="filter-label">Brand:</span>
-        <button class="f-tab brand active" data-filter="brand" data-val="all">All Brands</button>
-        ${[...brandSet].map(b => `<button class="f-tab brand" data-filter="brand" data-val="${b}">${esc(brandLabels[b] || b)}</button>`).join('')}
+        <button type="button" class="f-tab brand active" data-filter="brand" data-val="all" aria-pressed="true">All Brands</button>
+        ${[...brandSet].map(b => `<button type="button" class="f-tab brand" data-filter="brand" data-val="${b}" aria-pressed="false">${esc(brandLabels[b] || b)}</button>`).join('')}
       </div>
     `;
 
@@ -187,6 +194,30 @@ document.addEventListener('DOMContentLoaded', () => {
         <h4>${esc(a.title)}</h4>
         <p>${esc(a.text)}</p>
       </div>
+    `).join('');
+  }
+
+  // --- TRUST STRIP ---
+  const trustGrid = document.getElementById('trustGrid');
+  if (trustGrid && D.trust) {
+    trustGrid.innerHTML = D.trust.map(t => `
+      <div class="trust-item">
+        <div class="trust-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-${t.icon}"></use></svg></div>
+        <h3>${esc(t.title)}</h3>
+        <p>${esc(t.text)}</p>
+      </div>
+    `).join('');
+  }
+
+  // --- CUSTOMER REVIEWS ---
+  const reviewSlider = document.getElementById('reviewSlider');
+  if (reviewSlider && D.reviews) {
+    reviewSlider.innerHTML = D.reviews.map(r => `
+      <article class="review-card">
+        <div class="review-stars" aria-label="${r.rating} out of 5 stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+        <blockquote>${esc(r.text)}</blockquote>
+        <cite>${esc(r.name)} — ${esc(r.location)}</cite>
+      </article>
     `).join('');
   }
 
@@ -253,11 +284,15 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="footer-links">
         <a href="#services">${ico('wrench')} Services</a>
         <a href="#products">${ico('battery-charging')} Products</a>
+        <a href="#about">${ico('history')} Our Story</a>
+        <a href="#service-area">${ico('map-pin')} Service Area</a>
+        <a href="#faq">${ico('messages-square')} FAQ</a>
         <a href="#locations">${ico('map-pin')} Branches</a>
         <a href="${phone()}" rel="noopener">${ico('phone')} ${esc(D.profile.phoneDisplay)}</a>
         ${socialLinks.join('')}
         <a href="${D.profile.googleReviewLink}" target="_blank" rel="noopener noreferrer">${ico('star')} Review</a>
         <a href="${D.locations[0].mapLink}" target="_blank" rel="noopener noreferrer">${ico('navigation')} Directions</a>
+        <a href="/privacy.html">${ico('shield-check')} Privacy</a>
       </div>
     `;
   }
@@ -270,6 +305,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- CALL FLOAT ---
   const callFloat = document.getElementById('callFloat');
   if (callFloat) callFloat.href = phone();
+
+  // --- STICKY MOBILE CTA ---
+  const stickyCta = document.getElementById('stickyCta');
+  if (stickyCta) {
+    stickyCta.innerHTML = `
+      <a href="${phone()}" class="sticky-call" rel="noopener" data-track="sticky_call">${ico('phone-call')} <span>Call Now</span></a>
+      <a href="${D.locations[0].mapLink}" target="_blank" rel="noopener noreferrer" class="sticky-dir" data-track="sticky_directions">${ico('navigation')} <span>Directions</span></a>
+    `;
+    // hide the bar once the footer is on screen (the footer already has both actions)
+    const footer = document.querySelector('.footer');
+    if (footer && 'IntersectionObserver' in window) {
+      const fo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          stickyCta.classList.toggle('is-hidden', en.isIntersecting);
+        });
+      }, { threshold: 0.05 });
+      fo.observe(footer);
+    }
+  }
 
   // --- MOBILE MENU ---
   const mobileBtn = document.getElementById('mobileBtn');
@@ -306,22 +360,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  document.querySelectorAll('.f-tab[data-filter="cat"]').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.f-tab[data-filter="cat"]').forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      activeCat = tab.dataset.val;
-      filterProducts();
+  function bindFilter(kind, key) {
+    document.querySelectorAll('.f-tab[data-filter="' + kind + '"]').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.f-tab[data-filter="' + kind + '"]').forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-pressed', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-pressed', 'true');
+        if (kind === 'cat') activeCat = tab.dataset.val; else activeBrand = tab.dataset.val;
+        filterProducts();
+        trackEvent('product_filter', { filter: kind, value: tab.dataset.val });
+      });
     });
-  });
-  document.querySelectorAll('.f-tab[data-filter="brand"]').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.f-tab[data-filter="brand"]').forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      activeBrand = tab.dataset.val;
-      filterProducts();
-    });
-  });
+  }
+  bindFilter('cat', 'cat');
+  bindFilter('brand', 'brand');
 
   // --- SCROLL ANIMATIONS ---
   const observer = new IntersectionObserver((entries) => {
