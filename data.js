@@ -9,8 +9,6 @@ const SITE_DATA = {
     description: "Multi-brand battery & inverter dealer with 50+ years of expertise. From handcrafting HR batteries to becoming Alnavar's most trusted authorized dealer for Exide, Amaron, SF & Luminous — we've powered this community since 1994.",
     phone: "+919448667528",
     phoneDisplay: "94486 67528",
-    whatsapp: "919448667528",
-    whatsappMessage: "Hi, I need battery enquiry",
     email: "",
     sinceYear: 1994,
     googleReviewLink: "https://g.page/r/CRpn7PDqpJobEBM/review",
@@ -20,14 +18,14 @@ const SITE_DATA = {
     },
     seo: {
       title: "GK Batteries Alnavar — Multi-Brand Battery & Inverter Dealer | Jump Start | Rental",
-      description: "GK Batteries Alnavar — Exide, Amaron, SF & Luminous dealer. Car, tractor, bike, inverter batteries. Jump start, rental battery, agri sprayer pump service. Two branches in Alnavar."
+      description: "GK Batteries Alnavar — Exide, Amaron, SF, Yokohama & Dynex dealer. Car, SUV, tractor, bike, truck, e-rickshaw, inverter batteries. Jump start, rental battery, agri sprayer pump service. Two branches in Alnavar."
     }
   },
 
   // ─── STATS (shown in hero) ───
   stats: [
     { value: "50+", label: "Years Experience" },
-    { value: "4", label: "Brands Authorized" },
+    { value: "5", label: "Brands Authorized" },
     { value: "4.9", label: "Google Rating" },
     { value: "2", label: "Branches" }
   ],
@@ -133,7 +131,6 @@ const SITE_DATA = {
       badge: "",
       badgeType: "",
       features: ["18 Months Warranty", "Fits Activa, Splendor, Pulsar, Jupiter", "Sealed maintenance-free (VRLA)"],
-      whatsappText: "Hi, price for Exide Bike Battery"
     },
     {
       category: "auto",
@@ -144,7 +141,6 @@ const SITE_DATA = {
       badge: "",
       badgeType: "",
       features: ["24 Months Warranty", "Zero-maintenance, factory-charged", "Fits all popular Indian 2-wheelers"],
-      whatsappText: "Hi, price for Amaron Bike Battery"
     },
     // --- CAR / SEDAN ---
     {
@@ -156,7 +152,6 @@ const SITE_DATA = {
       badge: "Best Seller",
       badgeType: "popular",
       features: ["36 Months Warranty", "Fits Maruti, Hyundai, Toyota, Honda", "Maintenance-free option available"],
-      whatsappText: "Hi, price for Exide Car Battery"
     },
     {
       category: "auto",
@@ -167,7 +162,6 @@ const SITE_DATA = {
       badge: "",
       badgeType: "",
       features: ["40 Months Warranty", "Zero-maintenance, factory-charged", "Silver alloy technology for longer life"],
-      whatsappText: "Hi, price for Amaron Car Battery"
     },
     {
       category: "auto",
@@ -178,7 +172,6 @@ const SITE_DATA = {
       badge: "Value Pick",
       badgeType: "exchange",
       features: ["30 Months Warranty", "Japanese technology, Indian price", "Fits all popular car models"],
-      whatsappText: "Hi, price for Yokohama Car Battery"
     },
     // --- SUV / MUV ---
     {
@@ -190,7 +183,6 @@ const SITE_DATA = {
       badge: "",
       badgeType: "",
       features: ["42 Months Warranty", "Fits Scorpio, Innova, XUV, Fortuner", "High cranking power for diesel engines"],
-      whatsappText: "Hi, price for Exide SUV Battery"
     },
     {
       category: "auto",
@@ -201,7 +193,6 @@ const SITE_DATA = {
       badge: "",
       badgeType: "",
       features: ["48 Months Warranty", "BIC technology for extreme heat", "Fits all popular SUV/MUV models"],
-      whatsappText: "Hi, price for Amaron SUV Battery"
     },
     // --- TRACTOR / COMMERCIAL ---
     {
@@ -213,7 +204,6 @@ const SITE_DATA = {
       badge: "Heavy Duty",
       badgeType: "exchange",
       features: ["36 Months Warranty", "Mahindra, Swaraj, Eicher, TAFE", "Extra vibration resistance for rough terrain"],
-      whatsappText: "Hi, price for Exide Tractor Battery"
     },
     {
       category: "tractor",
@@ -224,7 +214,6 @@ const SITE_DATA = {
       badge: "",
       badgeType: "",
       features: ["48 Months Warranty", "John Deere, Mahindra, Eicher", "On-field installation available"],
-      whatsappText: "Hi, price for Amaron Tractor Battery"
     },
     // --- TRUCK ---
     {
@@ -236,7 +225,6 @@ const SITE_DATA = {
       badge: "Commercial",
       badgeType: "exchange",
       features: ["30 Months Warranty", "Tata, Ashok Leyland, BharatBenz", "High reserve capacity for long hauls"],
-      whatsappText: "Hi, price for Dynex Truck Battery"
     },
     // --- E-RICKSHAW ---
     {
@@ -248,7 +236,6 @@ const SITE_DATA = {
       badge: "",
       badgeType: "",
       features: ["36 Months Warranty", "Deep-cycle tubular design", "High charge acceptance for daily use"],
-      whatsappText: "Hi, price for Exide E-Rickshaw Battery"
     },
     // --- INVERTER ---
     {
@@ -260,7 +247,6 @@ const SITE_DATA = {
       badge: "Popular",
       badgeType: "popular",
       features: ["48 Months Warranty", "Long backup — fans, lights, TV", "Free installation in Alnavar"],
-      whatsappText: "Hi, price for Exide Inverter Battery"
     },
     {
       category: "inverter",
@@ -271,7 +257,6 @@ const SITE_DATA = {
       badge: "",
       badgeType: "",
       features: ["48 Months Warranty", "Patented Silica Gel technology", "Top-up intervals up to 18 months"],
-      whatsappText: "Hi, price for Amaron Inverter Battery"
     },
     {
       category: "inverter",
@@ -282,7 +267,6 @@ const SITE_DATA = {
       badge: "Budget Pick",
       badgeType: "exchange",
       features: ["36 Months Warranty", "Affordable tall tubular option", "Consistent backup performance"],
-      whatsappText: "Hi, price for Dynex Inverter Battery"
     }
   ],
 
