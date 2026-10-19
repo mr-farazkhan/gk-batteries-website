@@ -1,5 +1,4 @@
 /* ===== GK BATTERIES — SURGE DARK POWER THEME ===== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&family=Orbitron:wght@700;900&display=swap');
 
 /* --- RESET & TOKENS --- */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -20,6 +19,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-he
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
+.ico{width:1em;height:1em;flex-shrink:0;display:inline-block;vertical-align:-.125em}
 .container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
 
 /* --- ANNOUNCEMENT TICKER --- */

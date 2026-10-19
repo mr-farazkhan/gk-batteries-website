@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const phone = () => `tel:${D.profile.phone}`;
   const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const ico = (name) => `<svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-${name}"></use></svg>`;
 
   // --- SEO ---
   document.title = D.profile.seo.title;
@@ -15,15 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const tickerTrack = document.getElementById('tickerTrack');
   if (tickerTrack) {
     const tickerIcons = ['zap','battery-charging','phone','repeat','home','sprout'];
-    const items = D.ticker.map((t, i) => `<span><i data-lucide="${tickerIcons[i % tickerIcons.length]}"></i> ${esc(t)}</span>`).join('');
+    const items = D.ticker.map((t, i) => `<span>${ico(tickerIcons[i % tickerIcons.length])} ${esc(t)}</span>`).join('');
     tickerTrack.innerHTML = items + items;
   }
 
   // --- NAV ---
   const navCall = document.getElementById('navCallBtn');
-  if (navCall) { navCall.href = phone(); navCall.innerHTML = `<i data-lucide="phone"></i> Call Now`; }
+  if (navCall) { navCall.href = phone(); navCall.innerHTML = `${ico('phone')} Call Now`; }
   const mobileCall = document.getElementById('mobileCallLink');
-  if (mobileCall) { mobileCall.href = phone(); mobileCall.innerHTML = `<i data-lucide="phone"></i> Call ${D.profile.phoneDisplay}`; }
+  if (mobileCall) { mobileCall.href = phone(); mobileCall.innerHTML = `${ico('phone')} Call ${D.profile.phoneDisplay}`; }
 
   // --- HERO ---
   const heroTitle = document.getElementById('heroTitle');
@@ -35,15 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroBadges = document.getElementById('heroBadges');
   if (heroBadges) {
     heroBadges.innerHTML = D.badges.map(b =>
-      `<span class="h-badge"><i data-lucide="${b.icon}"></i> ${esc(b.text)}</span>`
+      `<span class="h-badge">${ico(b.icon)} ${esc(b.text)}</span>`
     ).join('');
   }
 
   const heroCtas = document.getElementById('heroCtas');
   if (heroCtas) {
     heroCtas.innerHTML = `
-      <a href="${phone()}" class="btn btn-amber"><i data-lucide="phone-call"></i> Call Now — ${esc(D.profile.phoneDisplay)}</a>
-      <a href="#products" class="btn btn-blue"><i data-lucide="battery-charging"></i> View Products</a>
+      <a href="${phone()}" class="btn btn-amber">${ico('phone-call')} Call Now — ${esc(D.profile.phoneDisplay)}</a>
+      <a href="#products" class="btn btn-blue">${ico('battery-charging')} View Products</a>
     `;
   }
 
@@ -74,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const aboutTimeline = document.getElementById('aboutTimeline');
   const aboutValues = document.getElementById('aboutValues');
   if (D.about && aboutStory) {
-    if (aboutOwnerIcon) aboutOwnerIcon.innerHTML = `<i data-lucide="${D.about.owner.icon || 'user-round'}"></i>`;
+    if (aboutOwnerIcon) aboutOwnerIcon.innerHTML = `${ico(D.about.owner.icon || 'user-round')}`;
     if (aboutOwnerName) aboutOwnerName.textContent = D.about.owner.name;
     if (aboutOwnerRole) aboutOwnerRole.textContent = D.about.owner.role;
     if (aboutLead) aboutLead.textContent = D.about.lead;
@@ -87,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (aboutTimeline) {
       aboutTimeline.innerHTML = D.about.milestones.map(m => `
         <li class="tl-item">
-          <span class="tl-dot"><i data-lucide="${m.icon}"></i></span>
+          <span class="tl-dot">${ico(m.icon)}</span>
           <div class="tl-body">
             <div class="tl-meta"><span class="tl-era">${esc(m.era)}</span><span class="tl-years">${esc(m.years)}</span></div>
             <h4>${esc(m.title)}</h4>
@@ -99,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (aboutValues) {
       aboutValues.innerHTML = D.about.values.map(v => `
         <div class="value-card fade-in">
-          <div class="value-icon"><i data-lucide="${v.icon}"></i></div>
+          <div class="value-icon">${ico(v.icon)}</div>
           <h4>${esc(v.title)}</h4>
           <p>${esc(v.text)}</p>
         </div>
@@ -112,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (svcGrid) {
     svcGrid.innerHTML = D.services.map(s => `
       <div class="svc-card fade-in">
-        <div class="svc-icon ${s.iconColor}"><i data-lucide="${s.icon}"></i></div>
+        <div class="svc-icon ${s.iconColor}">${ico(s.icon)}</div>
         <h3>${esc(s.title)}</h3>
         <p>${esc(s.description)}</p>
         <span class="svc-branch ${s.branch}">${esc(s.branchLabel)}</span>
@@ -124,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const emergencyBtn = document.getElementById('emergencyBtn');
   if (emergencyBtn) {
     emergencyBtn.href = phone();
-    emergencyBtn.innerHTML = `<i data-lucide="phone"></i> CALL NOW — ${esc(D.profile.phoneDisplay)}`;
+    emergencyBtn.innerHTML = `${ico('phone')} CALL NOW — ${esc(D.profile.phoneDisplay)}`;
   }
 
   // --- PRODUCTS ---
@@ -169,9 +170,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="p-body">
           <h3>${esc(p.title)}</h3>
           <p class="p-brand ${p.brand}">${esc(p.brandLabel)}</p>
-          <ul class="p-features">${p.features.map(f => `<li><i data-lucide="check"></i>${esc(f)}</li>`).join('')}</ul>
-          <div class="p-exchange"><i data-lucide="repeat"></i> Old Battery Exchange Discount</div>
-          <a href="${phone()}" class="p-call" rel="noopener" data-track="product_enquire" data-product="${esc(p.title)}"><i data-lucide="phone"></i> Call to Enquire</a>
+          <ul class="p-features">${p.features.map(f => `<li>${ico('check')}${esc(f)}</li>`).join('')}</ul>
+          <div class="p-exchange">${ico('repeat')} Old Battery Exchange Discount</div>
+          <a href="${phone()}" class="p-call" rel="noopener" data-track="product_enquire" data-product="${esc(p.title)}">${ico('phone')} Call to Enquire</a>
         </div>
       </div>
     `).join('');
@@ -182,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (whyGrid) {
     whyGrid.innerHTML = D.advantages.map(a => `
       <div class="why-card fade-in">
-        <div class="why-icon"><i data-lucide="${a.icon}"></i></div>
+        <div class="why-icon">${ico(a.icon)}</div>
         <h4>${esc(a.title)}</h4>
         <p>${esc(a.text)}</p>
       </div>
@@ -196,16 +197,16 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="loc-card fade-in">
         <div class="loc-card-head">
           <h3>${esc(loc.name)}</h3>
-          <span class="loc-tag ${loc.tag}"><i data-lucide="${loc.tagIcon || 'map-pin'}"></i> ${esc(loc.tagLabel)}</span>
+          <span class="loc-tag ${loc.tag}">${ico(loc.tagIcon || 'map-pin')} ${esc(loc.tagLabel)}</span>
         </div>
         <div class="loc-body">
-          <div class="loc-row"><i data-lucide="map-pin"></i><span>${esc(loc.address)}</span></div>
-          <div class="loc-row"><i data-lucide="clock"></i><span>${esc(loc.hours)}</span></div>
-          <div class="loc-row"><i data-lucide="phone"></i><span>${esc(loc.phone)}</span></div>
-          <div class="loc-highlight"><i data-lucide="${loc.highlightIcon || 'info'}"></i> ${esc(loc.highlight)}</div>
+          <div class="loc-row">${ico('map-pin')}<span>${esc(loc.address)}</span></div>
+          <div class="loc-row">${ico('clock')}<span>${esc(loc.hours)}</span></div>
+          <div class="loc-row">${ico('phone')}<span>${esc(loc.phone)}</span></div>
+          <div class="loc-highlight">${ico(loc.highlightIcon || 'info')} ${esc(loc.highlight)}</div>
           <div class="loc-btns">
-            <a href="tel:${loc.phoneLink}" class="loc-btn amber" rel="noopener"><i data-lucide="phone"></i> Call Now</a>
-            <a href="${loc.mapLink}" target="_blank" class="loc-btn outline" rel="noopener noreferrer"><i data-lucide="navigation"></i> Get Directions</a>
+            <a href="tel:${loc.phoneLink}" class="loc-btn amber" rel="noopener">${ico('phone')} Call Now</a>
+            <a href="${loc.mapLink}" target="_blank" class="loc-btn outline" rel="noopener noreferrer">${ico('navigation')} Get Directions</a>
           </div>
         </div>
         <div class="loc-map"><iframe src="${loc.mapEmbed}" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="${esc(loc.name)}"></iframe></div>
@@ -218,16 +219,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (reviewBlock) {
     reviewBlock.innerHTML = `
       <div class="review-cta-card">
-        <div class="review-cta-icon"><i data-lucide="star"></i></div>
+        <div class="review-cta-icon">${ico('star')}</div>
         <h3>Loved Our Service? Leave Us a Review!</h3>
         <p>Your 5-star Google review helps local customers find reliable battery service in Alnavar.</p>
         <a href="${D.profile.googleReviewLink}" target="_blank" class="google-btn" id="googleReviewBtn" data-track="review_cta_button">
-          <i data-lucide="star"></i> Write a Google Review
+          ${ico('star')} Write a Google Review
         </a>
         <div class="review-cta-contact">
           <p>Or call us directly:</p>
           <div class="review-cta-btns">
-            <a href="${phone()}" class="btn btn-amber"><i data-lucide="phone-call"></i> Call ${esc(D.profile.phoneDisplay)}</a>
+            <a href="${phone()}" class="btn btn-amber">${ico('phone-call')} Call ${esc(D.profile.phoneDisplay)}</a>
           </div>
         </div>
       </div>
@@ -250,13 +251,13 @@ document.addEventListener('DOMContentLoaded', () => {
         <span>${esc(D.profile.name)}</span>
       </div>
       <div class="footer-links">
-        <a href="#services"><i data-lucide="wrench"></i> Services</a>
-        <a href="#products"><i data-lucide="battery-charging"></i> Products</a>
-        <a href="#locations"><i data-lucide="map-pin"></i> Branches</a>
-        <a href="${phone()}" rel="noopener"><i data-lucide="phone"></i> ${esc(D.profile.phoneDisplay)}</a>
+        <a href="#services">${ico('wrench')} Services</a>
+        <a href="#products">${ico('battery-charging')} Products</a>
+        <a href="#locations">${ico('map-pin')} Branches</a>
+        <a href="${phone()}" rel="noopener">${ico('phone')} ${esc(D.profile.phoneDisplay)}</a>
         ${socialLinks.join('')}
-        <a href="${D.profile.googleReviewLink}" target="_blank" rel="noopener noreferrer"><i data-lucide="star"></i> Review</a>
-        <a href="${D.locations[0].mapLink}" target="_blank" rel="noopener noreferrer"><i data-lucide="navigation"></i> Directions</a>
+        <a href="${D.profile.googleReviewLink}" target="_blank" rel="noopener noreferrer">${ico('star')} Review</a>
+        <a href="${D.locations[0].mapLink}" target="_blank" rel="noopener noreferrer">${ico('navigation')} Directions</a>
       </div>
     `;
   }
@@ -269,9 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- CALL FLOAT ---
   const callFloat = document.getElementById('callFloat');
   if (callFloat) callFloat.href = phone();
-
-  // --- INIT LUCIDE ICONS ---
-  if (window.lucide) lucide.createIcons();
 
   // --- MOBILE MENU ---
   const mobileBtn = document.getElementById('mobileBtn');

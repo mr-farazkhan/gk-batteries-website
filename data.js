@@ -222,7 +222,7 @@ const SITE_DATA = {
     // --- BIKE / TWO-WHEELER ---
     {
       category: "auto",
-      image: "images/products/exide-bike.png",
+      image: "images/products/exide-bike.webp",
       title: "Exide Xplore Bike Battery",
       brand: "exide",
       brandLabel: "EXIDE · 2.5Ah – 9Ah",
@@ -232,7 +232,7 @@ const SITE_DATA = {
     },
     {
       category: "auto",
-      image: "images/products/amaron-bike.png",
+      image: "images/products/amaron-bike.webp",
       title: "Amaron Pro Rider Bike Battery",
       brand: "amaron",
       brandLabel: "AMARON · 2.5Ah – 9Ah",
@@ -243,7 +243,7 @@ const SITE_DATA = {
     // --- CAR / SEDAN ---
     {
       category: "auto",
-      image: "images/products/exide-car.png",
+      image: "images/products/exide-car.webp",
       title: "Exide Mileage Car Battery",
       brand: "exide",
       brandLabel: "EXIDE · 35Ah – 65Ah",
@@ -253,7 +253,7 @@ const SITE_DATA = {
     },
     {
       category: "auto",
-      image: "images/products/amaron-car.png",
+      image: "images/products/amaron-car.webp",
       title: "Amaron Go Car Battery",
       brand: "amaron",
       brandLabel: "AMARON · 35Ah – 80Ah",
@@ -263,7 +263,7 @@ const SITE_DATA = {
     },
     {
       category: "auto",
-      image: "images/products/yokohama-car.png",
+      image: "images/products/yokohama-car.webp",
       title: "Yokohama MF Car Battery",
       brand: "yokohama",
       brandLabel: "YOKOHAMA · 35Ah – 75Ah",
@@ -274,7 +274,7 @@ const SITE_DATA = {
     // --- SUV / MUV ---
     {
       category: "auto",
-      image: "images/products/exide-suv.png",
+      image: "images/products/exide-suv.webp",
       title: "Exide Matrix SUV Battery",
       brand: "exide",
       brandLabel: "EXIDE · 65Ah – 100Ah",
@@ -284,7 +284,7 @@ const SITE_DATA = {
     },
     {
       category: "auto",
-      image: "images/products/amaron-suv.png",
+      image: "images/products/amaron-suv.webp",
       title: "Amaron Fresh SUV Battery",
       brand: "amaron",
       brandLabel: "AMARON · 65Ah – 105Ah",
@@ -295,7 +295,7 @@ const SITE_DATA = {
     // --- TRACTOR / COMMERCIAL ---
     {
       category: "tractor",
-      image: "images/products/exide-tractor.png",
+      image: "images/products/exide-tractor.webp",
       title: "Exide Heavy Vehicle / Tractor Battery",
       brand: "exide",
       brandLabel: "EXIDE · 100Ah – 180Ah",
@@ -305,7 +305,7 @@ const SITE_DATA = {
     },
     {
       category: "tractor",
-      image: "images/products/amaron-tractor.png",
+      image: "images/products/amaron-tractor.webp",
       title: "Amaron Hi-Way Tractor Battery",
       brand: "amaron",
       brandLabel: "AMARON · 100Ah – 200Ah",
@@ -316,7 +316,7 @@ const SITE_DATA = {
     // --- TRUCK ---
     {
       category: "tractor",
-      image: "images/products/dynex-truck.png",
+      image: "images/products/dynex-truck.webp",
       title: "Dynex Truck & Heavy Vehicle Battery",
       brand: "dynex",
       brandLabel: "DYNEX · 130Ah – 200Ah",
@@ -327,7 +327,7 @@ const SITE_DATA = {
     // --- E-RICKSHAW ---
     {
       category: "tractor",
-      image: "images/products/exide-erickshaw.png",
+      image: "images/products/exide-erickshaw.webp",
       title: "Exide E-Rickshaw Battery",
       brand: "exide",
       brandLabel: "EXIDE · 100Ah – 130Ah Tubular",
@@ -338,7 +338,7 @@ const SITE_DATA = {
     // --- INVERTER ---
     {
       category: "inverter",
-      image: "images/products/exide-inverter.png",
+      image: "images/products/exide-inverter.webp",
       title: "Exide Inva Master Inverter Battery",
       brand: "exide",
       brandLabel: "EXIDE · 100Ah – 200Ah Tubular",
@@ -348,7 +348,7 @@ const SITE_DATA = {
     },
     {
       category: "inverter",
-      image: "images/products/amaron-inverter.png",
+      image: "images/products/amaron-inverter.webp",
       title: "Amaron Current Inverter Battery",
       brand: "amaron",
       brandLabel: "AMARON · 135Ah – 200Ah Tall Tubular",
@@ -358,7 +358,7 @@ const SITE_DATA = {
     },
     {
       category: "inverter",
-      image: "images/products/dynex-inverter.png",
+      image: "images/products/dynex-inverter.webp",
       title: "Dynex Tall Tubular Inverter Battery",
       brand: "dynex",
       brandLabel: "DYNEX · 150Ah – 220Ah Tubular",

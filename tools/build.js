@@ -31,6 +31,8 @@ const esc = (s) => String(s == null ? '' : s)
 
 const abs = (p) => SITE_URL + '/' + String(p).replace(/^\//, '');
 
+const ico = (name) => '<svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-' + name + '"></use></svg>';
+
 /* ---------- head meta ---------- */
 function buildHead(D) {
   const s = D.profile.seo;
@@ -81,7 +83,7 @@ function buildSchema(D) {
     'name': p.name,
     'alternateName': 'GK Battery',
     'url': SITE_URL + '/',
-    'logo': abs('images/logo.png'),
+    'logo': abs('images/logo.webp'),
     'image': abs('images/og-cover.jpg'),
     'description': p.description,
     'foundingDate': String(p.sinceYear),
@@ -220,7 +222,7 @@ function buildAbout(D) {
   const a = D.about;
   const milestones = a.milestones.map(m => `
           <li class="tl-item">
-            <span class="tl-dot"><i data-lucide="${esc(m.icon)}"></i></span>
+            <span class="tl-dot">${ico(esc(m.icon))}</span>
             <div class="tl-body">
               <div class="tl-meta"><span class="tl-era">${esc(m.era)}</span><span class="tl-years">${esc(m.years)}</span></div>
               <h4>${esc(m.title)}</h4>
@@ -234,7 +236,7 @@ function buildAbout(D) {
 
   const values = a.values.map(v => `
         <div class="value-card fade-in">
-          <div class="value-icon"><i data-lucide="${esc(v.icon)}"></i></div>
+          <div class="value-icon">${ico(esc(v.icon))}</div>
           <h4>${esc(v.title)}</h4>
           <p>${esc(v.text)}</p>
         </div>`).join('');
@@ -243,14 +245,14 @@ function buildAbout(D) {
     <section class="section" id="about" aria-label="About GK Batteries — the journey of owner Gous Khan">
       <div class="container">
         <div class="sec-header fade-in">
-          <div class="sec-tag"><i data-lucide="history"></i> ${esc(a.eyebrow)}</div>
+          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-history"></use></svg> ${esc(a.eyebrow)}</div>
           <h2>50+ Years of Batteries, <span class="hl">One Family Name</span></h2>
           <p>${esc(a.lead)}</p>
         </div>
         <div class="about-grid">
           <div class="about-story fade-in">
             <div class="about-owner">
-              <div class="about-owner-icon"><i data-lucide="${esc(a.owner.icon)}"></i></div>
+              <div class="about-owner-icon">${ico(esc(a.owner.icon))}</div>
               <div class="about-owner-meta">
                 <h3>${esc(a.owner.name)}</h3>
                 <span>${esc(a.owner.role)}</span>
@@ -265,7 +267,7 @@ function buildAbout(D) {
             </div>
           </div>
           <div class="about-timeline-card fade-in">
-            <h3 class="about-tl-title"><i data-lucide="milestone"></i> The Journey</h3>
+            <h3 class="about-tl-title"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-milestone"></use></svg> The Journey</h3>
             <ol class="about-tl">
           ${milestones}
             </ol>
@@ -293,7 +295,7 @@ function buildServiceArea(D) {
     <section class="section" id="service-area" aria-label="Service area — towns we deliver batteries to">
       <div class="container">
         <div class="sec-header fade-in">
-          <div class="sec-tag"><i data-lucide="map-pin"></i> Service Area</div>
+          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-map-pin"></use></svg> Service Area</div>
           <h2>${esc(sa.title)}</h2>
           <p>${esc(sa.intro)}</p>
         </div>
@@ -301,8 +303,8 @@ function buildServiceArea(D) {
           ${items}
         </ul>
         <div class="sa-cta fade-in">
-          <p><i data-lucide="truck"></i> Need a battery delivered outside this list? We still cover most of the Dharwad district and the NH-67 corridor.</p>
-          <a href="tel:${esc(D.profile.phone)}" class="btn btn-amber" rel="noopener" data-track="service_area_call"><i data-lucide="phone-call"></i> Call ${esc(D.profile.phoneDisplay)}</a>
+          <p><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-truck"></use></svg> Need a battery delivered outside this list? We still cover most of the Dharwad district and the NH-67 corridor.</p>
+          <a href="tel:${esc(D.profile.phone)}" class="btn btn-amber" rel="noopener" data-track="service_area_call"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-phone-call"></use></svg> Call ${esc(D.profile.phoneDisplay)}</a>
         </div>
       </div>
     </section>`;
@@ -312,7 +314,7 @@ function buildFaq(D) {
   const f = D.faq;
   const items = f.items.map((q, i) => `
           <details class="faq-item"${i === 0 ? ' open' : ''}>
-            <summary class="faq-q"><span>${esc(q.q)}</span><i data-lucide="chevron-down"></i></summary>
+            <summary class="faq-q"><span>${esc(q.q)}</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
             <div class="faq-a"><p>${esc(q.a)}</p></div>
           </details>`).join('');
 
@@ -320,7 +322,7 @@ function buildFaq(D) {
     <section class="section" id="faq" aria-label="Frequently asked questions about batteries">
       <div class="container">
         <div class="sec-header fade-in">
-          <div class="sec-tag"><i data-lucide="messages-square"></i> FAQ</div>
+          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-messages-square"></use></svg> FAQ</div>
           <h2>${esc(f.title)}</h2>
           <p>${esc(f.intro)}</p>
         </div>
@@ -329,7 +331,7 @@ function buildFaq(D) {
         </div>
         <div class="faq-cta fade-in">
           <p>Still unsure which battery fits? Call us — we will check your vehicle or load and recommend the right one, free of charge.</p>
-          <a href="tel:${esc(D.profile.phone)}" class="btn btn-amber" rel="noopener" data-track="faq_call"><i data-lucide="phone-call"></i> Call ${esc(D.profile.phoneDisplay)}</a>
+          <a href="tel:${esc(D.profile.phone)}" class="btn btn-amber" rel="noopener" data-track="faq_call"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-phone-call"></use></svg> Call ${esc(D.profile.phoneDisplay)}</a>
         </div>
       </div>
     </section>`;

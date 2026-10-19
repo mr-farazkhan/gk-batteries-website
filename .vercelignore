@@ -1,0 +1,17 @@
+# Files excluded from the Vercel deployment (kept in git for social posts / sources).
+node_modules
+images/cover_photo.png
+images/insta_post.png
+images/insta_post_info.png
+images/insta_promo_post.png
+images/storefront-azad.png
+images/storefront-main.png
+images/battery-products.png
+images/bike-battery.png
+images/car-battery.png
+images/inverter-battery.png
+images/inverter-setup.png
+images/tractor-battery.png
+images/tractor-battery-prod.png
+images/logo.png
+images/products/*.png
