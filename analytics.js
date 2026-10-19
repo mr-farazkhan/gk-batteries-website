@@ -254,7 +254,7 @@
     wrap.setAttribute('aria-label', 'Cookie and analytics consent');
     wrap.innerHTML =
       '<div class="consent-inner">' +
-        '<p class="consent-text"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-shield-check"></use></svg>' +
+        '<p class="consent-text"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-shield-check"></use></svg>' +
         '<span>We use cookies and privacy-friendly analytics to understand which regions our visitors come from. No ad tracking, no selling of data.</span></p>' +
         '<div class="consent-btns">' +
           '<button type="button" class="consent-btn accept" id="consentAccept">Accept</button>' +

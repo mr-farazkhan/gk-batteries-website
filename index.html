@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"/>
 <meta name="theme-color" content="#0a0e1a"/>
 <link rel="icon" type="image/png" href="images/favicon.png"/>
-<!-- Preconnect to Google Fonts for faster font loading -->
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&family=Orbitron:wght@700;900&display=swap"/>
+<link rel="preload" href="fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="fonts/rajdhani-700-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="fonts/orbitron-700-latin.woff2" as="font" type="font/woff2" crossorigin/>
 <!-- Preconnect to Google Maps for iframe embeds -->
 <link rel="preconnect" href="https://maps.google.com"/>
 <link rel="dns-prefetch" href="https://maps.google.com"/>
@@ -41,9 +40,9 @@
 <meta name="geo.placename" content="Alnavar, Dharwad District, Karnataka"/>
 <meta name="geo.position" content="15.7563;74.4886"/>
 <meta name="ICBM" content="region = IN-KA, Alnavar"/>
-<link rel="alternate" type="text/markdown" href="/gk-batteries.md"/>
-<link rel="describedby" href="/llms.txt"/>
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
+<link rel="alternate" type="text/markdown" href="gk-batteries.md"/>
+<link rel="describedby" href="llms.txt"/>
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
 <!-- /@gen:head -->
 
 <!-- Structured Data: Organization, LocalBusiness, Service, FAQPage, BreadcrumbList -->
@@ -60,7 +59,7 @@
       "url": "https://gkbatteries.in/",
       "logo": "https://gkbatteries.in/images/logo.webp",
       "image": "https://gkbatteries.in/images/og-cover.jpg",
-      "description": "Multi-brand battery & inverter dealer in Alnavar with 50+ years of expertise. From handcrafting hard-rubber (HR) batteries to becoming Alnavar's most trusted authorized dealer for Exide, Amaron, SF, Yokohama & Dynex — we've powered this community since 1994.",
+      "description": "Multi-brand battery & inverter dealer in Alnavar with 50+ years of hands-on battery experience. Owner Gous Khan built hard-rubber (HR) batteries by hand before opening his own GK Batteries store in Alnavar in 1994 — now an authorized dealer for Exide, Amaron, SF, Yokohama & Dynex with two branches, old-battery exchange, delivery and home inverter installation.",
       "foundingDate": "1994",
       "telephone": "+919448667528",
       "address": {
@@ -112,7 +111,7 @@
       "@id": "https://gkbatteries.in/#gous-khan",
       "name": "Gous Khan",
       "jobTitle": "Founder & Owner",
-      "description": "Owner of GK Batteries in Alnavar. More than 50 years of experience — from handcrafting hard-rubber (HR) batteries to running an authorized multi-brand battery dealership.",
+      "description": "Owner of GK Batteries in Alnavar. More than 50 years of hands-on battery experience: he built hard-rubber (HR) batteries by hand while working in other stores, then opened his own GK Batteries store in Alnavar in 1994 and grew it into an authorized multi-brand dealer with two branches.",
       "worksFor": {
         "@id": "https://gkbatteries.in/#organization"
       }
@@ -225,7 +224,7 @@
               "@type": "Product",
               "name": "Exide Xplore Bike Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/exide-bike.webp",
+              "image": "https://gkbatteries.in/images/products/bike.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "EXIDE"
@@ -238,7 +237,7 @@
               "@type": "Product",
               "name": "Amaron Pro Rider Bike Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/amaron-bike.webp",
+              "image": "https://gkbatteries.in/images/products/brand-amaron.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "AMARON"
@@ -251,7 +250,7 @@
               "@type": "Product",
               "name": "Exide Mileage Car Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/exide-car.webp",
+              "image": "https://gkbatteries.in/images/products/brand-exide.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "EXIDE"
@@ -264,7 +263,7 @@
               "@type": "Product",
               "name": "Amaron Go Car Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/amaron-car.webp",
+              "image": "https://gkbatteries.in/images/products/brand-amaron-2.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "AMARON"
@@ -277,7 +276,7 @@
               "@type": "Product",
               "name": "Yokohama MF Car Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/yokohama-car.webp",
+              "image": "https://gkbatteries.in/images/products/automotive.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "YOKOHAMA"
@@ -290,7 +289,7 @@
               "@type": "Product",
               "name": "Exide Matrix SUV Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/exide-suv.webp",
+              "image": "https://gkbatteries.in/images/products/brand-exide-2.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "EXIDE"
@@ -303,7 +302,7 @@
               "@type": "Product",
               "name": "Amaron Fresh SUV Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/amaron-suv.webp",
+              "image": "https://gkbatteries.in/images/products/brand-amaron-3.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "AMARON"
@@ -316,7 +315,7 @@
               "@type": "Product",
               "name": "Exide Heavy Vehicle / Tractor Battery",
               "category": "tractor",
-              "image": "https://gkbatteries.in/images/products/exide-tractor.webp",
+              "image": "https://gkbatteries.in/images/products/brand-tractor.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "EXIDE"
@@ -329,7 +328,7 @@
               "@type": "Product",
               "name": "Amaron Hi-Way Tractor Battery",
               "category": "tractor",
-              "image": "https://gkbatteries.in/images/products/amaron-tractor.webp",
+              "image": "https://gkbatteries.in/images/products/brand-tractor-2.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "AMARON"
@@ -342,7 +341,7 @@
               "@type": "Product",
               "name": "Dynex Truck & Heavy Vehicle Battery",
               "category": "tractor",
-              "image": "https://gkbatteries.in/images/products/dynex-truck.webp",
+              "image": "https://gkbatteries.in/images/products/heavyduty.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "DYNEX"
@@ -355,7 +354,7 @@
               "@type": "Product",
               "name": "Exide E-Rickshaw Battery",
               "category": "tractor",
-              "image": "https://gkbatteries.in/images/products/exide-erickshaw.webp",
+              "image": "https://gkbatteries.in/images/products/brand-exide-3.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "EXIDE"
@@ -368,7 +367,7 @@
               "@type": "Product",
               "name": "Exide Inva Master Inverter Battery",
               "category": "inverter",
-              "image": "https://gkbatteries.in/images/products/exide-inverter.webp",
+              "image": "https://gkbatteries.in/images/products/tubular.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "EXIDE"
@@ -381,7 +380,7 @@
               "@type": "Product",
               "name": "Amaron Current Inverter Battery",
               "category": "inverter",
-              "image": "https://gkbatteries.in/images/products/amaron-inverter.webp",
+              "image": "https://gkbatteries.in/images/products/tubular-2.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "AMARON"
@@ -394,7 +393,7 @@
               "@type": "Product",
               "name": "Dynex Tall Tubular Inverter Battery",
               "category": "inverter",
-              "image": "https://gkbatteries.in/images/products/dynex-inverter.webp",
+              "image": "https://gkbatteries.in/images/products/tubular-3.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "DYNEX"
@@ -517,7 +516,7 @@
               "@type": "Product",
               "name": "Exide Xplore Bike Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/exide-bike.webp",
+              "image": "https://gkbatteries.in/images/products/bike.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "EXIDE"
@@ -530,7 +529,7 @@
               "@type": "Product",
               "name": "Amaron Pro Rider Bike Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/amaron-bike.webp",
+              "image": "https://gkbatteries.in/images/products/brand-amaron.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "AMARON"
@@ -543,7 +542,7 @@
               "@type": "Product",
               "name": "Exide Mileage Car Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/exide-car.webp",
+              "image": "https://gkbatteries.in/images/products/brand-exide.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "EXIDE"
@@ -556,7 +555,7 @@
               "@type": "Product",
               "name": "Amaron Go Car Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/amaron-car.webp",
+              "image": "https://gkbatteries.in/images/products/brand-amaron-2.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "AMARON"
@@ -569,7 +568,7 @@
               "@type": "Product",
               "name": "Yokohama MF Car Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/yokohama-car.webp",
+              "image": "https://gkbatteries.in/images/products/automotive.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "YOKOHAMA"
@@ -582,7 +581,7 @@
               "@type": "Product",
               "name": "Exide Matrix SUV Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/exide-suv.webp",
+              "image": "https://gkbatteries.in/images/products/brand-exide-2.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "EXIDE"
@@ -595,7 +594,7 @@
               "@type": "Product",
               "name": "Amaron Fresh SUV Battery",
               "category": "auto",
-              "image": "https://gkbatteries.in/images/products/amaron-suv.webp",
+              "image": "https://gkbatteries.in/images/products/brand-amaron-3.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "AMARON"
@@ -608,7 +607,7 @@
               "@type": "Product",
               "name": "Exide Heavy Vehicle / Tractor Battery",
               "category": "tractor",
-              "image": "https://gkbatteries.in/images/products/exide-tractor.webp",
+              "image": "https://gkbatteries.in/images/products/brand-tractor.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "EXIDE"
@@ -621,7 +620,7 @@
               "@type": "Product",
               "name": "Amaron Hi-Way Tractor Battery",
               "category": "tractor",
-              "image": "https://gkbatteries.in/images/products/amaron-tractor.webp",
+              "image": "https://gkbatteries.in/images/products/brand-tractor-2.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "AMARON"
@@ -634,7 +633,7 @@
               "@type": "Product",
               "name": "Dynex Truck & Heavy Vehicle Battery",
               "category": "tractor",
-              "image": "https://gkbatteries.in/images/products/dynex-truck.webp",
+              "image": "https://gkbatteries.in/images/products/heavyduty.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "DYNEX"
@@ -647,7 +646,7 @@
               "@type": "Product",
               "name": "Exide E-Rickshaw Battery",
               "category": "tractor",
-              "image": "https://gkbatteries.in/images/products/exide-erickshaw.webp",
+              "image": "https://gkbatteries.in/images/products/brand-exide-3.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "EXIDE"
@@ -660,7 +659,7 @@
               "@type": "Product",
               "name": "Exide Inva Master Inverter Battery",
               "category": "inverter",
-              "image": "https://gkbatteries.in/images/products/exide-inverter.webp",
+              "image": "https://gkbatteries.in/images/products/tubular.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "EXIDE"
@@ -673,7 +672,7 @@
               "@type": "Product",
               "name": "Amaron Current Inverter Battery",
               "category": "inverter",
-              "image": "https://gkbatteries.in/images/products/amaron-inverter.webp",
+              "image": "https://gkbatteries.in/images/products/tubular-2.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "AMARON"
@@ -686,7 +685,7 @@
               "@type": "Product",
               "name": "Dynex Tall Tubular Inverter Battery",
               "category": "inverter",
-              "image": "https://gkbatteries.in/images/products/dynex-inverter.webp",
+              "image": "https://gkbatteries.in/images/products/tubular-3.webp",
               "brand": {
                 "@type": "Brand",
                 "name": "DYNEX"
@@ -873,7 +872,7 @@
           "name": "What is the difference between a hard-rubber battery and a modern battery?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hard-rubber (HR) batteries used a rubber casing with hard-rubber separators — they were heavy, needed frequent water top-ups and had a shorter life. Modern batteries use poly-cased bodies, improved lead-acid chemistry, tubular or maintenance-free plates (VRLA) and last far longer with almost no maintenance. GK Batteries began by hand-building HR batteries more than 50 years ago and moved with the material shift to modern chemistry."
+            "text": "Hard-rubber (HR) batteries used a rubber casing with hard-rubber separators — they were heavy, needed frequent water top-ups and had a shorter life. Modern batteries use poly-cased bodies, improved lead-acid chemistry, tubular or maintenance-free plates (VRLA) and last far longer with almost no maintenance. Gous Khan built HR batteries by hand while working in other stores for years, mastered the material shift to modern chemistry, and opened his own GK Batteries store in Alnavar in 1994."
           }
         },
         {
@@ -927,6 +926,8 @@
 <!-- /@gen:jsonld -->
 </head>
 <body>
+<div class="aurora" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 <a href="#main" class="skip-link">Skip to main content</a>
 <main id="main">
 
@@ -944,7 +945,7 @@
     <a href="#locations" class="tb-link">Branches</a>
     <a href="#review" class="tb-link">Review</a>
   </div>
-<div class="tb-actions"><a href="#" class="tb-call primary" id="navCallBtn" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-phone"></use></svg> Call Now</a></div>
+<div class="tb-actions"><a href="#" class="tb-call primary" id="navCallBtn" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-phone"></use></svg> Call Now</a></div>
 <button class="mobile-menu-btn" id="mobileBtn" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div>
   <div class="mobile-drawer" id="mobileDrawer" role="menu" aria-hidden="true">
@@ -953,7 +954,7 @@
     <a href="#about" role="menuitem">About</a>
     <a href="#locations" role="menuitem">Branches</a>
     <a href="#review" role="menuitem">Review</a>
-    <a href="#" id="mobileCallLink" role="menuitem"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-phone"></use></svg> Call Now</a>
+    <a href="#" id="mobileCallLink" role="menuitem"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-phone"></use></svg> Call Now</a>
   </div>
 </nav>
 
@@ -962,17 +963,17 @@
 <div class="hero-grid-bg" aria-hidden="true"></div>
 <div class="container">
 <div class="hero-grid">
-      <div class="hero-left fade-in">
+      <div class="hero-left">
 <h1 id="heroTitle"><!-- @gen:heroTitle -->
 Your Trusted <span class="hl">Power Partner</span> in Alnavar
 <!-- /@gen:heroTitle --></h1>
 <p class="hero-sub" id="heroDesc"><!-- @gen:heroDesc -->
-Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of expertise. From handcrafting hard-rubber (HR) batteries to becoming Alnavar&#39;s most trusted authorized dealer for Exide, Amaron, SF, Yokohama &amp; Dynex — we&#39;ve powered this community since 1994.
+Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of hands-on battery experience. Owner Gous Khan built hard-rubber (HR) batteries by hand before opening his own GK Batteries store in Alnavar in 1994 — now an authorized dealer for Exide, Amaron, SF, Yokohama &amp; Dynex with two branches, old-battery exchange, delivery and home inverter installation.
 <!-- /@gen:heroDesc --></p>
 <div class="hero-badges" id="heroBadges"></div>
 <div class="hero-ctas" id="heroCtas"></div>
 </div>
-<div class="hero-right fade-in">
+<div class="hero-right">
 <div class="stats-grid" id="statsGrid"></div>
 </div>
 </div>
@@ -988,87 +989,103 @@ Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of expertise
     <section class="section" id="about" aria-label="About GK Batteries — the journey of owner Gous Khan">
       <div class="container">
         <div class="sec-header fade-in">
-          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-history"></use></svg> Our Story</div>
+          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-history"></use></svg> Our Story</div>
           <h2>50+ Years of Batteries, <span class="hl">One Family Name</span></h2>
-          <p>Fifty-plus years ago, Gous Khan built batteries by hand in a small Alnavar workshop. Today GK Batteries is an authorized multi-brand dealer with two branches — and the same promise: honest batteries, fair exchange rates, and a phone that always gets answered.</p>
+          <p>Owner Gous Khan built hard-rubber batteries by hand, learned the trade in other stores, and opened his own GK Batteries shop in Alnavar in 1994. This is the journey since.</p>
         </div>
         <div class="about-grid">
           <div class="about-story fade-in">
             <div class="about-owner">
-              <div class="about-owner-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-user-round"></use></svg></div>
+              <div class="about-owner-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-user-round"></use></svg></div>
               <div class="about-owner-meta">
                 <h3>Gous Khan</h3>
                 <span>Founder &amp; Owner</span>
               </div>
             </div>
-            <p class="about-lead">Fifty-plus years ago, Gous Khan built batteries by hand in a small Alnavar workshop. Today GK Batteries is an authorized multi-brand dealer with two branches — and the same promise: honest batteries, fair exchange rates, and a phone that always gets answered.</p>
+            <p class="about-lead">Over fifty years ago, Gous Khan started in the battery trade — learning it the hard way, building hard-rubber (HR) batteries by hand in other people&#39;s stores. In 1994 he opened his own shop in Alnavar. Today GK Batteries is an authorized multi-brand dealer with two branches — and the same promise: honest batteries, fair exchange rates, and a phone that always gets answered.</p>
             <div class="about-prose">
-              <p>It began with hard rubber. In the early days, Gous Khan made hard-rubber (HR) batteries the hard way — plates, cells and casings assembled by hand, cured and tested on the bench, one battery at a time. There were no brands to order from and no dealer network to fall back on. There was workmanship, and the local word-of-mouth that followed it.</p>
-              <p>As the industry moved, so did he. Hard rubber gave way to new materials — poly-cased shells, better lead-acid paste chemistry, tubular plates and, later, maintenance-free VRLA and tall tubular inverter batteries. Re-tooling the workshop was hard work, but it kept GK ahead of the change instead of watching customers drive to the next town for a battery they could have bought at home.</p>
-              <p>The third shift was the biggest: from making batteries to selling them. GK Batteries became an authorized retail dealer for Exide, Amaron, SF, Yokohama and Dynex — real stock, fair old-battery exchange rates, delivery and installation, and a service record built on picking up the phone. Two branches later, one at Goa Cross on NH-67 for highway emergencies and one on Azad Road for local sales, service and setup. The hands at the counter have changed. The promise hasn&#39;t.</p>
+              <p>It began with hard rubber, in someone else&#39;s shop. Gous Khan learned the trade the hard way — plates, cells and casings assembled by hand, cured and tested on the bench, one battery at a time. He worked for other stores for years, learning every failure mode of an HR battery the only way you can: by building them, and by watching what customers came back about.</p>
+              <p>When the industry changed materials — from hard-rubber casings to poly-cased shells, better lead-acid paste chemistry, and later tubular and maintenance-free VRLA and tall tubular inverter batteries — he learned the new build the same way, hands on, so customers never had to travel further for a reliable battery.</p>
+              <p>In 1994 he opened his own store in Alnavar. The call to make batteries gave way to the call to sell them honestly: GK Batteries became an authorized retail dealer for Exide, Amaron, SF, Yokohama and Dynex — real stock, fair old-battery exchange rates, delivery and installation, and a service record built on picking up the phone. Two branches later, one at Goa Cross on NH-67 for highway emergencies and one on Azad Road for local sales, service and setup. The hands at the counter have changed. The promise hasn&#39;t.</p>
             </div>
             <div class="about-legacy">
-          <div class="legacy-card"><span class="legacy-num">50+</span><span class="legacy-label">Years in Batteries</span></div>
+          <div class="legacy-card"><span class="legacy-num">50+</span><span class="legacy-label">Years in the Trade</span></div>
+          <div class="legacy-card"><span class="legacy-num">1994</span><span class="legacy-label">Own Store Opened</span></div>
           <div class="legacy-card"><span class="legacy-num">5</span><span class="legacy-label">Authorized Brands</span></div>
           <div class="legacy-card"><span class="legacy-num">2</span><span class="legacy-label">Branches in Alnavar</span></div>
-          <div class="legacy-card"><span class="legacy-num">20</span><span class="legacy-label">km Free Delivery</span></div>
             </div>
           </div>
           <div class="about-timeline-card fade-in">
-            <h3 class="about-tl-title"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-milestone"></use></svg> The Journey</h3>
+            <h3 class="about-tl-title"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-milestone"></use></svg> The Journey</h3>
             <ol class="about-tl">
           
           <li class="tl-item">
-            <span class="tl-dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-hammer"></use></svg></span>
+            <span class="tl-dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-hammer"></use></svg></span>
             <div class="tl-body">
-              <div class="tl-meta"><span class="tl-era">The Workshop Years</span><span class="tl-years">1970s</span></div>
+              <div class="tl-meta"><span class="tl-era">Learning the Trade</span><span class="tl-years">Before 1994</span></div>
               <h4>Handcrafted Hard-Rubber (HR) Batteries</h4>
-              <p>Gous Khan starts a one-man workshop in Alnavar and hand-builds hard-rubber (HR) batteries — plate work, cell assembly and casing done by hand, one unit at a time, for two-wheelers, jeeps and tractors.</p>
+              <p>Gous Khan builds hard-rubber (HR) batteries by hand while working in other stores — plate work, cell assembly and casing done by hand, one unit at a time, for two-wheelers, jeeps and tractors. Every failure and every fix goes into his head.</p>
             </div>
           </li>
           <li class="tl-item">
-            <span class="tl-dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-layers"></use></svg></span>
+            <span class="tl-dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-layers"></use></svg></span>
             <div class="tl-body">
-              <div class="tl-meta"><span class="tl-era">The Material Shift</span><span class="tl-years">1980s</span></div>
+              <div class="tl-meta"><span class="tl-era">The Material Shift</span><span class="tl-years">Through the trade</span></div>
               <h4>Hard Rubber Out, Modern Chemistry In</h4>
-              <p>The industry changes materials — from hard-rubber casings to poly-cased shells, improved lead-acid chemistry, and later tubular and maintenance-free VRLA technology. GK re-tools the workshop and masters the new build so customers never travel further for a reliable battery.</p>
+              <p>The industry changes materials — from hard-rubber casings to poly-cased shells, improved lead-acid chemistry, and later tubular and maintenance-free VRLA technology. He masters the new build hands-on, so the quality follows the material.</p>
             </div>
           </li>
           <li class="tl-item">
-            <span class="tl-dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-badge-check"></use></svg></span>
+            <span class="tl-dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-store"></use></svg></span>
             <div class="tl-body">
-              <div class="tl-meta"><span class="tl-era">Into Authorized Retail</span><span class="tl-years">1990s</span></div>
-              <h4>From Workshop to Authorized Battery Dealer</h4>
-              <p>The call to make batteries gives way to the call to sell them honestly. GK becomes an authorized dealer for leading brands, adds genuine stock, fair old-battery exchange, delivery and installation — and a service record built on answering the phone.</p>
+              <div class="tl-meta"><span class="tl-era">Opening His Own Store</span><span class="tl-years">1994</span></div>
+              <h4>GK Batteries Opens in Alnavar</h4>
+              <p>Gous Khan opens his own GK Batteries store in Alnavar, Dharwad District. Genuine stock, honest old-battery exchange and a counter where the owner is the person who answers the phone.</p>
             </div>
           </li>
           <li class="tl-item">
-            <span class="tl-dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-map-pin"></use></svg></span>
+            <span class="tl-dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-map-pin"></use></svg></span>
             <div class="tl-body">
               <div class="tl-meta"><span class="tl-era">Two Branches Today</span><span class="tl-years">Today</span></div>
               <h4>Goa Cross, Azad Road, One Mission</h4>
-              <p>Goa Cross on NH-67 keeps highway travellers running with jump starts and instant swaps. Azad Road is the full-service hub for battery sales, inverter setup, charging, agri sprayer pump batteries and rentals. Over 50 years in, the shop is still owner-led and the phone is still answered.</p>
+              <p>Goa Cross on NH-67 keeps highway travellers running with jump starts and instant swaps. Azad Road is the full-service hub for battery sales, inverter setup, charging, agri sprayer pump batteries and rentals. Over 50 years in the trade, the shop is still owner-led and the phone is still answered.</p>
             </div>
           </li>
             </ol>
           </div>
         </div>
+        <div class="about-media fade-in">
+          <figure class="about-photo">
+            <img src="images/brands-lineup.webp" alt="Real battery stock lined up on the GK Batteries counter" width="760" height="760" loading="lazy" decoding="async"/>
+            <figcaption>Fifty years on, the counter still looks like this — real stock, real brands, real advice.</figcaption>
+          </figure>
+          <div class="about-media-text">
+            <h3>From making batteries to standing behind them</h3>
+            <p>What changed in the workshop was the material. What never changed was the standard: a battery that starts the vehicle the first time, an old battery valued honestly, and a phone that a customer can ring and actually get answered.</p>
+            <ul class="about-checks">
+              <li><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-check"></use></svg> Hand-built HR batteries — plates, cells and casings assembled by hand</li>
+              <li><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-check"></use></svg> Re-tooled for poly-cased, tubular and maintenance-free VRLA chemistry</li>
+              <li><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-check"></use></svg> Own shop in Alnavar since 1994, now two branches</li>
+              <li><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-check"></use></svg> Authorized Exide, Amaron, SF, Yokohama &amp; Dynex stock</li>
+            </ul>
+          </div>
+        </div>
         <div class="about-values">
           
         <div class="value-card fade-in">
-          <div class="value-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-handshake"></use></svg></div>
+          <div class="value-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-handshake"></use></svg></div>
           <h4>Straight Exchange</h4>
           <p>Old batteries valued at fair rates, quoted before we touch them. No pressure tactics, no shortcuts.</p>
         </div>
         <div class="value-card fade-in">
-          <div class="value-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-tractor"></use></svg></div>
+          <div class="value-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-tractor"></use></svg></div>
           <h4>On-Field Service</h4>
           <p>Tractor, e-rickshaw and agri sprayer pump batteries delivered and installed at your farm or doorstep.</p>
         </div>
         <div class="value-card fade-in">
-          <div class="value-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-users"></use></svg></div>
+          <div class="value-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-users"></use></svg></div>
           <h4>Owner-Led, Family Run</h4>
-          <p>Owner-led since day one. The person who built the batteries is still the one who picks up the phone.</p>
+          <p>Owner-led since 1994. The person who opened the shop is still the one who picks up the phone.</p>
         </div>
         </div>
       </div>
@@ -1079,7 +1096,7 @@ Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of expertise
 <section class="section" id="services" aria-label="Services">
 <div class="container">
 <div class="sec-header fade-in">
-<div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-wrench"></use></svg> Our Services</div>
+<div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-wrench"></use></svg> Our Services</div>
 <h2>Complete Battery &amp; Power Solutions</h2>
 <p>From highway emergencies to farm fields to your living room — we've got you covered.</p>
 </div>
@@ -1087,11 +1104,38 @@ Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of expertise
 </div>
 </section>
 
+<!-- REAL WORK / PROOF -->
+<section class="section" id="proof" aria-label="Real work by GK Batteries">
+  <div class="container">
+    <div class="sec-header fade-in">
+      <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-camera"></use></svg> On The Job</div>
+      <h2>Real Work, Real Batteries</h2>
+      <p>On-field installation and home inverter setups — done by our own hands, in your area.</p>
+    </div>
+    <div class="proof-grid">
+      <figure class="proof-card fade-in">
+        <img src="images/scene-tractor-install.webp" alt="An EXIDE heavy-duty battery being installed on a John Deere tractor in a field" width="900" height="900" loading="lazy" decoding="async"/>
+        <figcaption>
+          <h3>On-field tractor installation</h3>
+          <p>We bring the battery to your farm and fit it there — no tractor to tow, no waiting at the counter.</p>
+        </figcaption>
+      </figure>
+      <figure class="proof-card fade-in">
+        <img src="images/scene-inverter-setup.webp" alt="A home inverter and battery installed in a living room for power backup" width="900" height="900" loading="lazy" decoding="async"/>
+        <figcaption>
+          <h3>Home inverter setup</h3>
+          <p>Right-sized tubular battery, terminals wired, water-top-up schedule explained before we leave.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- EMERGENCY STRIP -->
 <div class="emergency-strip" role="alert" aria-label="Emergency contact">
 <div class="container emergency-inner">
-<span class="emergency-text"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-alert-triangle"></use></svg> Battery Dead? Stranded on Highway?</span>
-<a href="#" class="emergency-btn" id="emergencyBtn" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-phone"></use></svg> CALL NOW</a>
+<span class="emergency-text"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-alert-triangle"></use></svg> Battery Dead? Stranded on Highway?</span>
+<a href="#" class="emergency-btn" id="emergencyBtn" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-phone"></use></svg> CALL NOW</a>
 </div>
 </div>
 
@@ -1099,7 +1143,7 @@ Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of expertise
 <section class="section" id="products" aria-label="Product catalog">
 <div class="container">
 <div class="sec-header fade-in">
-<div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-battery-charging"></use></svg> Product Catalog</div>
+<div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-battery-charging"></use></svg> Product Catalog</div>
 <h2>Browse Our Battery &amp; Inverter Range</h2>
 <p>Genuine products from India's top brands. Old battery exchange discount on every purchase.</p>
 </div>
@@ -1112,7 +1156,7 @@ Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of expertise
 <section class="section" aria-label="Why choose GK Batteries">
 <div class="container">
 <div class="sec-header fade-in">
-<div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-award"></use></svg> The GK Advantage</div>
+<div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-award"></use></svg> The GK Advantage</div>
 <h2>Why Alnavar Trusts GK Batteries</h2>
 </div>
 <div class="why-grid" id="whyGrid"></div>
@@ -1131,7 +1175,7 @@ Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of expertise
 <section class="section" id="reviews" aria-label="Customer reviews">
   <div class="container">
     <div class="sec-header fade-in">
-      <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-star"></use></svg> Customer Reviews</div>
+      <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-star"></use></svg> Customer Reviews</div>
       <h2>What Alnavar Says About Us</h2>
       <p>Rated 4.9 on Google by drivers, farmers and families across Dharwad district.</p>
     </div>
@@ -1145,7 +1189,7 @@ Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of expertise
     <section class="section" id="service-area" aria-label="Service area — towns we deliver batteries to">
       <div class="container">
         <div class="sec-header fade-in">
-          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-map-pin"></use></svg> Service Area</div>
+          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-map-pin"></use></svg> Service Area</div>
           <h2>We Deliver &amp; Service Batteries Across the Alnavar–Belgaum–Goa Belt</h2>
           <p>From our Alnavar branches we deliver, install and jump-start batteries across Dharwad district and the NH-67 corridor. Free delivery and installation within 20 km; other towns on order.</p>
         </div>
@@ -1237,8 +1281,8 @@ Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of expertise
           </li>
         </ul>
         <div class="sa-cta fade-in">
-          <p><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-truck"></use></svg> Need a battery delivered outside this list? We still cover most of the Dharwad district and the NH-67 corridor.</p>
-          <a href="tel:+919448667528" class="btn btn-amber" rel="noopener" data-track="service_area_call"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-phone-call"></use></svg> Call 94486 67528</a>
+          <p><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-truck"></use></svg> Need a battery delivered outside this list? We still cover most of the Dharwad district and the NH-67 corridor.</p>
+          <a href="tel:+919448667528" class="btn btn-amber" rel="noopener" data-track="service_area_call"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-phone-call"></use></svg> Call 94486 67528</a>
         </div>
       </div>
     </section>
@@ -1248,7 +1292,7 @@ Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of expertise
 <section class="section" id="locations" aria-label="Branch locations">
 <div class="container">
 <div class="sec-header fade-in">
-<div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-map-pin"></use></svg> Our Branches</div>
+<div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-map-pin"></use></svg> Our Branches</div>
 <h2>Two Branches — One Mission: Keep You Powered</h2>
 <p>Highway service at Goa Cross. Local sales &amp; service at Azad Road.</p>
 </div>
@@ -1262,64 +1306,64 @@ Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of expertise
     <section class="section" id="faq" aria-label="Frequently asked questions about batteries">
       <div class="container">
         <div class="sec-header fade-in">
-          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-messages-square"></use></svg> FAQ</div>
+          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-messages-square"></use></svg> FAQ</div>
           <h2>Battery Questions, Answered</h2>
           <p>Straight answers about batteries, prices, delivery and service in Alnavar.</p>
         </div>
         <div class="faq-list fade-in" id="faqList">
           
           <details class="faq-item" open>
-            <summary class="faq-q"><span>Which is the best battery shop in Alnavar for car batteries?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
+            <summary class="faq-q"><span>Which is the best battery shop in Alnavar for car batteries?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-chevron-down"></use></svg></summary>
             <div class="faq-a"><p>GK Batteries is an authorized multi-brand battery dealer with two branches in Alnavar — the highway branch at NH-67, Goa Cross and the local hub on Azad Road. We stock Exide, Amaron, SF, Yokohama and Dynex batteries for two-wheelers, cars, SUVs, tractors, trucks and e-rickshaws, with free doorstep installation within 20 km and old-battery exchange at fair rates. Call 94486 67528 for the best price.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q"><span>How much does a car battery cost in Alnavar?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
+            <summary class="faq-q"><span>How much does a car battery cost in Alnavar?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-chevron-down"></use></svg></summary>
             <div class="faq-a"><p>A new car battery in Alnavar usually runs from about ₹4,500 for a 35Ah maintenance-free unit up to ₹16,000 for a 100Ah tubular or SUV battery, depending on brand, capacity and warranty. The final price also depends on your vehicle and the old battery you exchange. Call 94486 67528 for an exact same-day quote — we quote before we deliver.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q"><span>Do you sell inverter batteries for home backup in Alnavar?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
+            <summary class="faq-q"><span>Do you sell inverter batteries for home backup in Alnavar?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-chevron-down"></use></svg></summary>
             <div class="faq-a"><p>Yes. We stock tubular and maintenance-free inverter batteries from 100Ah to 220Ah (Exide Inva Master, Amaron Current, Dynex and SF) for homes, shops and offices. We size the battery to your load, deliver it, install the terminals, do the wiring and set up a water-top-up schedule. Installation is free in Alnavar.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q"><span>Which inverter battery is best for a 2 BHK home in Alnavar?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
+            <summary class="faq-q"><span>Which inverter battery is best for a 2 BHK home in Alnavar?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-chevron-down"></use></svg></summary>
             <div class="faq-a"><p>For a typical 2 BHK running fans, lights, TV and a few appliances, a 150–180Ah tall tubular battery gives roughly 3 to 5 hours of backup, while 200Ah or more suits longer outages or heavier loads. In Alnavar, where outages are common, we usually recommend a tall tubular over a maintenance-free unit because it lasts longer. Send us your load and we will size it free of charge.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q"><span>Do you provide jump start service on NH-67?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
+            <summary class="faq-q"><span>Do you provide jump start service on NH-67?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-chevron-down"></use></svg></summary>
             <div class="faq-a"><p>Yes — our Goa Cross branch sits on NH-67 for exactly this reason. A dead battery on the highway between Alnavar, Londa and Goa is a quick job for us. Call 94486 67528 and we will reach you with a jump pack and a replacement battery, day or night, for cars, bikes and commercial vehicles.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q"><span>Do you deliver batteries to Londa, Ramapur, Kakkeri and nearby villages?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
+            <summary class="faq-q"><span>Do you deliver batteries to Londa, Ramapur, Kakkeri and nearby villages?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-chevron-down"></use></svg></summary>
             <div class="faq-a"><p>Yes. We deliver and install free within a 20 km radius of Alnavar, which covers Londa, Ramapur, Kakkeri, Mugad, Tamboor and Khanapur. For Dharwad, Hubli, Belgaum, Gadag and the Goa belt, delivery is available on order. Call us with your location and we will confirm the timing.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q"><span>Do you accept old batteries in exchange?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
+            <summary class="faq-q"><span>Do you accept old batteries in exchange?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-chevron-down"></use></svg></summary>
             <div class="faq-a"><p>Yes, and we quote the exchange value before we remove anything. The value depends on the battery&#39;s age, brand and condition, and it is applied as a discount against your new purchase. We accept old car, bike, tractor, inverter and e-rickshaw batteries.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q"><span>What is the difference between a hard-rubber battery and a modern battery?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
-            <div class="faq-a"><p>Hard-rubber (HR) batteries used a rubber casing with hard-rubber separators — they were heavy, needed frequent water top-ups and had a shorter life. Modern batteries use poly-cased bodies, improved lead-acid chemistry, tubular or maintenance-free plates (VRLA) and last far longer with almost no maintenance. GK Batteries began by hand-building HR batteries more than 50 years ago and moved with the material shift to modern chemistry.</p></div>
+            <summary class="faq-q"><span>What is the difference between a hard-rubber battery and a modern battery?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-chevron-down"></use></svg></summary>
+            <div class="faq-a"><p>Hard-rubber (HR) batteries used a rubber casing with hard-rubber separators — they were heavy, needed frequent water top-ups and had a shorter life. Modern batteries use poly-cased bodies, improved lead-acid chemistry, tubular or maintenance-free plates (VRLA) and last far longer with almost no maintenance. Gous Khan built HR batteries by hand while working in other stores for years, mastered the material shift to modern chemistry, and opened his own GK Batteries store in Alnavar in 1994.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q"><span>How long does a car battery last?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
+            <summary class="faq-q"><span>How long does a car battery last?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-chevron-down"></use></svg></summary>
             <div class="faq-a"><p>A good car battery lasts 3 to 5 years in Indian heat, 2 to 3 years for a two-wheeler, and 4 to 6 years for a tubular inverter battery that gets regular water top-ups. If your car struggles to start, the lights dim at idle, or the battery is over three years old, get a free health check at either branch.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q"><span>Do you repair and charge batteries, or only sell new ones?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
+            <summary class="faq-q"><span>Do you repair and charge batteries, or only sell new ones?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-chevron-down"></use></svg></summary>
             <div class="faq-a"><p>Both. We run battery health checks, terminal cleaning, water top-ups, slow and fast charging and re-conditioning of old batteries at the Azad Road branch. We also rent batteries for weddings, functions and emergencies, and service agri sprayer pump and e-rickshaw batteries.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q"><span>Do you sell tractor, truck and e-rickshaw batteries?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
+            <summary class="faq-q"><span>Do you sell tractor, truck and e-rickshaw batteries?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-chevron-down"></use></svg></summary>
             <div class="faq-a"><p>Yes. We stock 100Ah to 200Ah heavy-duty batteries for Mahindra, Swaraj, John Deere, Eicher and TAFE tractors, 130Ah to 200Ah for trucks and commercial vehicles, and deep-cycle tubular batteries for e-rickshaws. For tractors we deliver and install at your farm — you do not need to bring the vehicle in.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q"><span>What are your timings, address and branch locations?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
+            <summary class="faq-q"><span>What are your timings, address and branch locations?</span><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-chevron-down"></use></svg></summary>
             <div class="faq-a"><p>GK Batteries is open Monday to Sunday, 7:00 AM to 7:00 PM, at two branches in Alnavar, Dharwad District, Karnataka 581103 — the highway branch at NH-67, Goa Cross, and the local hub on Azad Road. Call 94486 67528 for directions or an immediate price.</p></div>
           </details>
         </div>
         <div class="faq-cta fade-in">
           <p>Still unsure which battery fits? Call us — we will check your vehicle or load and recommend the right one, free of charge.</p>
-          <a href="tel:+919448667528" class="btn btn-amber" rel="noopener" data-track="faq_call"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-phone-call"></use></svg> Call 94486 67528</a>
+          <a href="tel:+919448667528" class="btn btn-amber" rel="noopener" data-track="faq_call"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-phone-call"></use></svg> Call 94486 67528</a>
         </div>
       </div>
     </section>
@@ -1329,7 +1373,7 @@ Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of expertise
 <section class="section" id="review" aria-label="Leave a review">
 <div class="container">
 <div class="sec-header fade-in">
-<div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-star"></use></svg> Rate Us</div>
+<div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-star"></use></svg> Rate Us</div>
 <h2>Share Your Experience with GK Batteries</h2>
 <p>Your feedback helps us improve and helps others find trusted battery service in Alnavar.</p>
 </div>
@@ -1350,7 +1394,7 @@ Multi-brand battery &amp; inverter dealer in Alnavar with 50+ years of expertise
 </footer>
 
 <!-- FLOATING CALL BUTTON -->
-<a href="#" class="call-float" id="callFloat" aria-label="Call GK Batteries now" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-phone"></use></svg></a>
+<a href="#" class="call-float" id="callFloat" aria-label="Call GK Batteries now" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-phone"></use></svg></a>
 
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta" id="stickyCta" aria-label="Quick actions"></div>

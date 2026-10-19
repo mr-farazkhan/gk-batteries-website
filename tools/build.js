@@ -31,7 +31,7 @@ const esc = (s) => String(s == null ? '' : s)
 
 const abs = (p) => SITE_URL + '/' + String(p).replace(/^\//, '');
 
-const ico = (name) => '<svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-' + name + '"></use></svg>';
+const ico = (name) => '<svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-' + name + '"></use></svg>';
 
 /* ---------- head meta ---------- */
 function buildHead(D) {
@@ -65,9 +65,9 @@ function buildHead(D) {
     `<meta name="geo.placename" content="Alnavar, Dharwad District, Karnataka"/>`,
     `<meta name="geo.position" content="15.7563;74.4886"/>`,
     `<meta name="ICBM" content="region = IN-KA, Alnavar"/>`,
-    `<link rel="alternate" type="text/markdown" href="/gk-batteries.md"/>`,
-    `<link rel="describedby" href="/llms.txt"/>`,
-    `<link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>`
+    `<link rel="alternate" type="text/markdown" href="gk-batteries.md"/>`,
+    `<link rel="describedby" href="llms.txt"/>`,
+    `<link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>`
   ].join('\n');
 }
 
@@ -123,7 +123,7 @@ function buildSchema(D) {
     '@id': SITE_URL + '/#gous-khan',
     'name': D.about.owner.name,
     'jobTitle': D.about.owner.role,
-    'description': 'Owner of GK Batteries in Alnavar. More than 50 years of experience — from handcrafting hard-rubber (HR) batteries to running an authorized multi-brand battery dealership.',
+    'description': 'Owner of GK Batteries in Alnavar. More than 50 years of hands-on battery experience: he built hard-rubber (HR) batteries by hand while working in other stores, then opened his own GK Batteries store in Alnavar in 1994 and grew it into an authorized multi-brand dealer with two branches.',
     'worksFor': { '@id': orgId }
   });
 
@@ -245,9 +245,9 @@ function buildAbout(D) {
     <section class="section" id="about" aria-label="About GK Batteries — the journey of owner Gous Khan">
       <div class="container">
         <div class="sec-header fade-in">
-          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-history"></use></svg> ${esc(a.eyebrow)}</div>
+          <div class="sec-tag">${ico('history')} ${esc(a.eyebrow)}</div>
           <h2>50+ Years of Batteries, <span class="hl">One Family Name</span></h2>
-          <p>${esc(a.lead)}</p>
+          <p>Owner Gous Khan built hard-rubber batteries by hand, learned the trade in other stores, and opened his own GK Batteries shop in Alnavar in 1994. This is the journey since.</p>
         </div>
         <div class="about-grid">
           <div class="about-story fade-in">
@@ -267,10 +267,26 @@ function buildAbout(D) {
             </div>
           </div>
           <div class="about-timeline-card fade-in">
-            <h3 class="about-tl-title"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-milestone"></use></svg> The Journey</h3>
+            <h3 class="about-tl-title">${ico('milestone')} The Journey</h3>
             <ol class="about-tl">
           ${milestones}
             </ol>
+          </div>
+        </div>
+        <div class="about-media fade-in">
+          <figure class="about-photo">
+            <img src="images/brands-lineup.webp" alt="Real battery stock lined up on the GK Batteries counter" width="760" height="760" loading="lazy" decoding="async"/>
+            <figcaption>Fifty years on, the counter still looks like this — real stock, real brands, real advice.</figcaption>
+          </figure>
+          <div class="about-media-text">
+            <h3>From making batteries to standing behind them</h3>
+            <p>What changed in the workshop was the material. What never changed was the standard: a battery that starts the vehicle the first time, an old battery valued honestly, and a phone that a customer can ring and actually get answered.</p>
+            <ul class="about-checks">
+              <li>${ico('check')} Hand-built HR batteries — plates, cells and casings assembled by hand</li>
+              <li>${ico('check')} Re-tooled for poly-cased, tubular and maintenance-free VRLA chemistry</li>
+              <li>${ico('check')} Own shop in Alnavar since 1994, now two branches</li>
+              <li>${ico('check')} Authorized Exide, Amaron, SF, Yokohama &amp; Dynex stock</li>
+            </ul>
           </div>
         </div>
         <div class="about-values">
@@ -295,7 +311,7 @@ function buildServiceArea(D) {
     <section class="section" id="service-area" aria-label="Service area — towns we deliver batteries to">
       <div class="container">
         <div class="sec-header fade-in">
-          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-map-pin"></use></svg> Service Area</div>
+          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-map-pin"></use></svg> Service Area</div>
           <h2>${esc(sa.title)}</h2>
           <p>${esc(sa.intro)}</p>
         </div>
@@ -303,8 +319,8 @@ function buildServiceArea(D) {
           ${items}
         </ul>
         <div class="sa-cta fade-in">
-          <p><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-truck"></use></svg> Need a battery delivered outside this list? We still cover most of the Dharwad district and the NH-67 corridor.</p>
-          <a href="tel:${esc(D.profile.phone)}" class="btn btn-amber" rel="noopener" data-track="service_area_call"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-phone-call"></use></svg> Call ${esc(D.profile.phoneDisplay)}</a>
+          <p><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-truck"></use></svg> Need a battery delivered outside this list? We still cover most of the Dharwad district and the NH-67 corridor.</p>
+          <a href="tel:${esc(D.profile.phone)}" class="btn btn-amber" rel="noopener" data-track="service_area_call"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-phone-call"></use></svg> Call ${esc(D.profile.phoneDisplay)}</a>
         </div>
       </div>
     </section>`;
@@ -314,7 +330,7 @@ function buildFaq(D) {
   const f = D.faq;
   const items = f.items.map((q, i) => `
           <details class="faq-item"${i === 0 ? ' open' : ''}>
-            <summary class="faq-q"><span>${esc(q.q)}</span><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-chevron-down"></use></svg></summary>
+            <summary class="faq-q"><span>${esc(q.q)}</span><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-chevron-down"></use></svg></summary>
             <div class="faq-a"><p>${esc(q.a)}</p></div>
           </details>`).join('');
 
@@ -322,7 +338,7 @@ function buildFaq(D) {
     <section class="section" id="faq" aria-label="Frequently asked questions about batteries">
       <div class="container">
         <div class="sec-header fade-in">
-          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-messages-square"></use></svg> FAQ</div>
+          <div class="sec-tag"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-messages-square"></use></svg> FAQ</div>
           <h2>${esc(f.title)}</h2>
           <p>${esc(f.intro)}</p>
         </div>
@@ -331,7 +347,7 @@ function buildFaq(D) {
         </div>
         <div class="faq-cta fade-in">
           <p>Still unsure which battery fits? Call us — we will check your vehicle or load and recommend the right one, free of charge.</p>
-          <a href="tel:${esc(D.profile.phone)}" class="btn btn-amber" rel="noopener" data-track="faq_call"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-phone-call"></use></svg> Call ${esc(D.profile.phoneDisplay)}</a>
+          <a href="tel:${esc(D.profile.phone)}" class="btn btn-amber" rel="noopener" data-track="faq_call"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-phone-call"></use></svg> Call ${esc(D.profile.phoneDisplay)}</a>
         </div>
       </div>
     </section>`;

@@ -1,0 +1,78 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install image tooling
+        run: python3 -m pip install --quiet pillow
+
+      - name: Generate static HTML from data.js
+        run: node tools/build.js
+
+      - name: Prepare product + brand images
+        run: |
+          python3 tools/prepare-product-images.py
+          python3 tools/remove-bg.py
+          python3 tools/make-images.py
+
+      - name: Stage the site
+        run: |
+          mkdir -p _site/images
+          cp index.html 404.html privacy.html styles.css script.js data.js analytics.js _site/
+          cp robots.txt sitemap.xml llms.txt gk-batteries.md _site/
+          cp images/icons.svg images/logo.webp images/favicon.png images/og-cover.jpg \
+             images/apple-touch-icon.png images/brands-lineup.webp \
+             images/scene-tractor-install.webp images/scene-inverter-setup.webp \
+             images/storefront-azad.webp _site/images/
+          mkdir -p _site/images/products
+          cp images/products/*.webp _site/images/products/
+          cp -r fonts _site/fonts
+          touch _site/.nojekyll
+          ls -la _site
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

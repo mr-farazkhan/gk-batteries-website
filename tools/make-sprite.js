@@ -19,7 +19,7 @@ const pascal = (kebab) => kebab.split('-')
 
 /* every icon referenced by the site */
 const ICONS = [
-  'alert-triangle', 'award', 'badge-check', 'battery-charging', 'car', 'check',
+  'alert-triangle', 'award', 'badge-check', 'battery-charging', 'camera', 'car', 'check',
   'chevron-down', 'clock', 'hammer', 'handshake', 'history', 'home', 'layers',
   'map-pin', 'messages-square', 'milestone', 'navigation', 'phone', 'phone-call',
   'plug-zap', 'repeat', 'shield-check', 'sprout', 'star', 'store', 'tractor',

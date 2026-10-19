@@ -1,6 +1,6 @@
 # GK Batteries — Your Trusted Power Partner in Alnavar
 
-> Multi-brand battery & inverter dealer in Alnavar with 50+ years of expertise. From handcrafting hard-rubber (HR) batteries to becoming Alnavar's most trusted authorized dealer for Exide, Amaron, SF, Yokohama & Dynex — we've powered this community since 1994.
+> Multi-brand battery & inverter dealer in Alnavar with 50+ years of hands-on battery experience. Owner Gous Khan built hard-rubber (HR) batteries by hand before opening his own GK Batteries store in Alnavar in 1994 — now an authorized dealer for Exide, Amaron, SF, Yokohama & Dynex with two branches, old-battery exchange, delivery and home inverter installation.
 
 **Phone:** 94486 67528  
 **Branches:** 2 (NH-67 Goa Cross — highway service; Azad Road — sales & service)  
@@ -10,23 +10,23 @@
 
 ## Owner
 
-**Gous Khan** — Founder & Owner. Fifty-plus years ago, Gous Khan built batteries by hand in a small Alnavar workshop. Today GK Batteries is an authorized multi-brand dealer with two branches — and the same promise: honest batteries, fair exchange rates, and a phone that always gets answered.
+**Gous Khan** — Founder & Owner. Over fifty years ago, Gous Khan started in the battery trade — learning it the hard way, building hard-rubber (HR) batteries by hand in other people's stores. In 1994 he opened his own shop in Alnavar. Today GK Batteries is an authorized multi-brand dealer with two branches — and the same promise: honest batteries, fair exchange rates, and a phone that always gets answered.
 
-It began with hard rubber. In the early days, Gous Khan made hard-rubber (HR) batteries the hard way — plates, cells and casings assembled by hand, cured and tested on the bench, one battery at a time. There were no brands to order from and no dealer network to fall back on. There was workmanship, and the local word-of-mouth that followed it.
+It began with hard rubber, in someone else's shop. Gous Khan learned the trade the hard way — plates, cells and casings assembled by hand, cured and tested on the bench, one battery at a time. He worked for other stores for years, learning every failure mode of an HR battery the only way you can: by building them, and by watching what customers came back about.
 
-As the industry moved, so did he. Hard rubber gave way to new materials — poly-cased shells, better lead-acid paste chemistry, tubular plates and, later, maintenance-free VRLA and tall tubular inverter batteries. Re-tooling the workshop was hard work, but it kept GK ahead of the change instead of watching customers drive to the next town for a battery they could have bought at home.
+When the industry changed materials — from hard-rubber casings to poly-cased shells, better lead-acid paste chemistry, and later tubular and maintenance-free VRLA and tall tubular inverter batteries — he learned the new build the same way, hands on, so customers never had to travel further for a reliable battery.
 
-The third shift was the biggest: from making batteries to selling them. GK Batteries became an authorized retail dealer for Exide, Amaron, SF, Yokohama and Dynex — real stock, fair old-battery exchange rates, delivery and installation, and a service record built on picking up the phone. Two branches later, one at Goa Cross on NH-67 for highway emergencies and one on Azad Road for local sales, service and setup. The hands at the counter have changed. The promise hasn't.
+In 1994 he opened his own store in Alnavar. The call to make batteries gave way to the call to sell them honestly: GK Batteries became an authorized retail dealer for Exide, Amaron, SF, Yokohama and Dynex — real stock, fair old-battery exchange rates, delivery and installation, and a service record built on picking up the phone. Two branches later, one at Goa Cross on NH-67 for highway emergencies and one on Azad Road for local sales, service and setup. The hands at the counter have changed. The promise hasn't.
 
 ### Journey
 
-**1970s — The Workshop Years:** Handcrafted Hard-Rubber (HR) Batteries. Gous Khan starts a one-man workshop in Alnavar and hand-builds hard-rubber (HR) batteries — plate work, cell assembly and casing done by hand, one unit at a time, for two-wheelers, jeeps and tractors.
+**Before 1994 — Learning the Trade:** Handcrafted Hard-Rubber (HR) Batteries. Gous Khan builds hard-rubber (HR) batteries by hand while working in other stores — plate work, cell assembly and casing done by hand, one unit at a time, for two-wheelers, jeeps and tractors. Every failure and every fix goes into his head.
 
-**1980s — The Material Shift:** Hard Rubber Out, Modern Chemistry In. The industry changes materials — from hard-rubber casings to poly-cased shells, improved lead-acid chemistry, and later tubular and maintenance-free VRLA technology. GK re-tools the workshop and masters the new build so customers never travel further for a reliable battery.
+**Through the trade — The Material Shift:** Hard Rubber Out, Modern Chemistry In. The industry changes materials — from hard-rubber casings to poly-cased shells, improved lead-acid chemistry, and later tubular and maintenance-free VRLA technology. He masters the new build hands-on, so the quality follows the material.
 
-**1990s — Into Authorized Retail:** From Workshop to Authorized Battery Dealer. The call to make batteries gives way to the call to sell them honestly. GK becomes an authorized dealer for leading brands, adds genuine stock, fair old-battery exchange, delivery and installation — and a service record built on answering the phone.
+**1994 — Opening His Own Store:** GK Batteries Opens in Alnavar. Gous Khan opens his own GK Batteries store in Alnavar, Dharwad District. Genuine stock, honest old-battery exchange and a counter where the owner is the person who answers the phone.
 
-**Today — Two Branches Today:** Goa Cross, Azad Road, One Mission. Goa Cross on NH-67 keeps highway travellers running with jump starts and instant swaps. Azad Road is the full-service hub for battery sales, inverter setup, charging, agri sprayer pump batteries and rentals. Over 50 years in, the shop is still owner-led and the phone is still answered.
+**Today — Two Branches Today:** Goa Cross, Azad Road, One Mission. Goa Cross on NH-67 keeps highway travellers running with jump starts and instant swaps. Azad Road is the full-service hub for battery sales, inverter setup, charging, agri sprayer pump batteries and rentals. Over 50 years in the trade, the shop is still owner-led and the phone is still answered.
 
 ## Services
 
@@ -125,7 +125,7 @@ Yes, and we quote the exchange value before we remove anything. The value depend
 
 ### What is the difference between a hard-rubber battery and a modern battery?
 
-Hard-rubber (HR) batteries used a rubber casing with hard-rubber separators — they were heavy, needed frequent water top-ups and had a shorter life. Modern batteries use poly-cased bodies, improved lead-acid chemistry, tubular or maintenance-free plates (VRLA) and last far longer with almost no maintenance. GK Batteries began by hand-building HR batteries more than 50 years ago and moved with the material shift to modern chemistry.
+Hard-rubber (HR) batteries used a rubber casing with hard-rubber separators — they were heavy, needed frequent water top-ups and had a shorter life. Modern batteries use poly-cased bodies, improved lead-acid chemistry, tubular or maintenance-free plates (VRLA) and last far longer with almost no maintenance. Gous Khan built HR batteries by hand while working in other stores for years, mastered the material shift to modern chemistry, and opened his own GK Batteries store in Alnavar in 1994.
 
 ### How long does a car battery last?
 

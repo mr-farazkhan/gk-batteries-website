@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const phone = () => `tel:${D.profile.phone}`;
   const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-  const ico = (name) => `<svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-${name}"></use></svg>`;
+  const ico = (name) => `<svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-${name}"></use></svg>`;
 
   // Analytics bridge — analytics.js exposes GKAnalytics; guard for safety.
   const trackEvent = (name, params) => {
@@ -170,8 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Build product cards with data-brand
     prodGrid.innerHTML = D.products.map(p => `
       <div class="p-card fade-in" data-cat="${p.category}" data-brand="${p.brand}">
-        <div class="p-img">
-          <img src="${p.image}" alt="${esc(p.title)}" width="280" height="160" loading="lazy" decoding="async"/>
+        <div class="p-img ${p.tone || 'light'}">
+          <img src="${p.image}" alt="${esc(p.title)}" width="280" height="200" loading="lazy" decoding="async"/>
           ${p.badge ? `<span class="p-badge ${p.badgeType}">${esc(p.badge)}</span>` : ''}
         </div>
         <div class="p-body">
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (trustGrid && D.trust) {
     trustGrid.innerHTML = D.trust.map(t => `
       <div class="trust-item">
-        <div class="trust-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="/images/icons.svg#i-${t.icon}"></use></svg></div>
+        <div class="trust-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-${t.icon}"></use></svg></div>
         <h3>${esc(t.title)}</h3>
         <p>${esc(t.text)}</p>
       </div>
@@ -240,6 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="${loc.mapLink}" target="_blank" class="loc-btn outline" rel="noopener noreferrer">${ico('navigation')} Get Directions</a>
           </div>
         </div>
+        ${loc.photo ? `<div class="loc-photo"><img src="${loc.photo}" alt="${esc(loc.photoAlt || loc.name + " — GK Batteries")}" width="600" height="400" loading="lazy" decoding="async"/></div>` : ''}
         <div class="loc-map"><iframe src="${loc.mapEmbed}" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="${esc(loc.name)}"></iframe></div>
       </div>
     `).join('');
@@ -282,17 +283,13 @@ document.addEventListener('DOMContentLoaded', () => {
         <span>${esc(D.profile.name)}</span>
       </div>
       <div class="footer-links">
-        <a href="#services">${ico('wrench')} Services</a>
-        <a href="#products">${ico('battery-charging')} Products</a>
-        <a href="#about">${ico('history')} Our Story</a>
         <a href="#service-area">${ico('map-pin')} Service Area</a>
         <a href="#faq">${ico('messages-square')} FAQ</a>
-        <a href="#locations">${ico('map-pin')} Branches</a>
+        <a href="#proof">${ico('camera')} Our Work</a>
         <a href="${phone()}" rel="noopener">${ico('phone')} ${esc(D.profile.phoneDisplay)}</a>
         ${socialLinks.join('')}
-        <a href="${D.profile.googleReviewLink}" target="_blank" rel="noopener noreferrer">${ico('star')} Review</a>
         <a href="${D.locations[0].mapLink}" target="_blank" rel="noopener noreferrer">${ico('navigation')} Directions</a>
-        <a href="/privacy.html">${ico('shield-check')} Privacy</a>
+        <a href="privacy.html">${ico('shield-check')} Privacy</a>
       </div>
     `;
   }
