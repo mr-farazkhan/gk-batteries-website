@@ -51,6 +51,71 @@ const SITE_DATA = {
   // ─── BRANDS ───
   brands: ["EXIDE", "AMARON", "SF BATTERIES", "YOKOHAMA", "DYNEX"],
 
+  // ─── ABOUT / OWNER JOURNEY ───
+  // ⚠ FACT CHECK BEFORE PUBLISHING — edit the values below (all in ONE place):
+  //   1. FOUNDING YEAR  → profile.sinceYear is 1994, but "50+ years" implies ~1976.
+  //      social_media.txt says "since 2011". Pick one and make the whole site match.
+  //   2. milestone[0].years  → year hard-rubber (HR) battery making began.
+  //   3. milestone[1].years  → year of the material shift (HR → poly/lead-acid/tubular).
+  //   4. milestone[2].years  → year the authorized-retail stage began.
+  //   5. OWNER NAME SPELLING → "Gous Khan" (or "Gaus Khan"?) and the era captions below.
+  about: {
+    eyebrow: "Our Story",
+    owner: {
+      name: "Gous Khan",
+      role: "Founder & Owner",
+      icon: "user-round"
+    },
+    headline: "From Handcrafted HR Batteries to Alnavar's Trusted Multi-Brand Dealer",
+    lead: "Fifty-plus years ago, Gous Khan built batteries by hand in a small Alnavar workshop. Today GK Batteries is an authorized multi-brand dealer with two branches — and the same promise: honest batteries, fair exchange rates, and a phone that always gets answered.",
+    story: [
+      "It began with hard rubber. In the early days, Gous Khan made hard-rubber (HR) batteries the hard way — plates, cells and casings assembled by hand, cured and tested on the bench, one battery at a time. There were no brands to order from and no dealer network to fall back on. There was workmanship, and the local word-of-mouth that followed it.",
+      "As the industry moved, so did he. Hard rubber gave way to new materials — poly-cased shells, better lead-acid paste chemistry, tubular plates and, later, maintenance-free VRLA and tall tubular inverter batteries. Re-tooling the workshop was hard work, but it kept GK ahead of the change instead of watching customers drive to the next town for a battery they could have bought at home.",
+      "The third shift was the biggest: from making batteries to selling them. GK Batteries became an authorized retail dealer for Exide, Amaron, SF, Yokohama and Dynex — real stock, fair old-battery exchange rates, delivery and installation, and a service record built on picking up the phone. Two branches later, one at Goa Cross on NH-67 for highway emergencies and one on Azad Road for local sales, service and setup. The hands at the counter have changed. The promise hasn't."
+    ],
+    milestones: [
+      {
+        era: "The Workshop Years",
+        years: "1970s",
+        icon: "hammer",
+        title: "Handcrafted Hard-Rubber (HR) Batteries",
+        text: "Gous Khan starts a one-man workshop in Alnavar and hand-builds hard-rubber (HR) batteries — plate work, cell assembly and casing done by hand, one unit at a time, for two-wheelers, jeeps and tractors."
+      },
+      {
+        era: "The Material Shift",
+        years: "1980s",
+        icon: "layers",
+        title: "Hard Rubber Out, Modern Chemistry In",
+        text: "The industry changes materials — from hard-rubber casings to poly-cased shells, improved lead-acid chemistry, and later tubular and maintenance-free VRLA technology. GK re-tools the workshop and masters the new build so customers never travel further for a reliable battery."
+      },
+      {
+        era: "Into Authorized Retail",
+        years: "1990s",
+        icon: "badge-check",
+        title: "From Workshop to Authorized Battery Dealer",
+        text: "The call to make batteries gives way to the call to sell them honestly. GK becomes an authorized dealer for leading brands, adds genuine stock, fair old-battery exchange, delivery and installation — and a service record built on answering the phone."
+      },
+      {
+        era: "Two Branches Today",
+        years: "Today",
+        icon: "map-pin",
+        title: "Goa Cross, Azad Road, One Mission",
+        text: "Goa Cross on NH-67 keeps highway travellers running with jump starts and instant swaps. Azad Road is the full-service hub for battery sales, inverter setup, charging, agri sprayer pump batteries and rentals. Over 50 years in, the shop is still owner-led and the phone is still answered."
+      }
+    ],
+    legacy: [
+      { value: "50+", label: "Years in Batteries" },
+      { value: "5", label: "Authorized Brands" },
+      { value: "2", label: "Branches in Alnavar" },
+      { value: "20", label: "km Free Delivery" }
+    ],
+    values: [
+      { icon: "handshake", title: "Straight Exchange", text: "Old batteries valued at fair rates, quoted before we touch them. No pressure tactics, no shortcuts." },
+      { icon: "tractor", title: "On-Field Service", text: "Tractor, e-rickshaw and agri sprayer pump batteries delivered and installed at your farm or doorstep." },
+      { icon: "users", title: "Owner-Led, Family Run", text: "Owner-led since day one. The person who built the batteries is still the one who picks up the phone." }
+    ]
+  },
+
   // ─── SERVICES ───
   services: [
     {

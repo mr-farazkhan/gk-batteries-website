@@ -59,22 +59,24 @@
 <nav class="topbar" id="topbar" role="navigation" aria-label="Main navigation">
 <div class="container topbar-inner">
 <a href="#" class="tb-brand"><img src="images/logo.png" alt="GK Batteries Logo" class="tb-brand-logo" width="36" height="36" loading="eager" fetchpriority="high"/><span class="tb-name" id="navBrandName">Batteries</span></a>
-<div class="tb-links">
-<a href="#services" class="tb-link">Services</a>
-<a href="#products" class="tb-link">Products</a>
-<a href="#locations" class="tb-link">Branches</a>
-<a href="#review" class="tb-link">Review</a>
-</div>
+  <div class="tb-links">
+    <a href="#services" class="tb-link">Services</a>
+    <a href="#products" class="tb-link">Products</a>
+    <a href="#about" class="tb-link">About</a>
+    <a href="#locations" class="tb-link">Branches</a>
+    <a href="#review" class="tb-link">Review</a>
+  </div>
 <div class="tb-actions"><a href="#" class="tb-call primary" id="navCallBtn" rel="noopener"><i data-lucide="phone"></i> Call Now</a></div>
 <button class="mobile-menu-btn" id="mobileBtn" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div>
-<div class="mobile-drawer" id="mobileDrawer" role="menu" aria-hidden="true">
-<a href="#services" role="menuitem">Services</a>
-<a href="#products" role="menuitem">Products</a>
-<a href="#locations" role="menuitem">Branches</a>
-<a href="#review" role="menuitem">Review</a>
-<a href="#" id="mobileCallLink" role="menuitem"><i data-lucide="phone"></i> Call Now</a>
-</div>
+  <div class="mobile-drawer" id="mobileDrawer" role="menu" aria-hidden="true">
+    <a href="#services" role="menuitem">Services</a>
+    <a href="#products" role="menuitem">Products</a>
+    <a href="#about" role="menuitem">About</a>
+    <a href="#locations" role="menuitem">Branches</a>
+    <a href="#review" role="menuitem">Review</a>
+    <a href="#" id="mobileCallLink" role="menuitem"><i data-lucide="phone"></i> Call Now</a>
+  </div>
 </nav>
 
 <!-- HERO (above the fold — eager loading) -->
@@ -97,6 +99,36 @@
 
 <!-- BRAND MARQUEE -->
 <div class="brand-marquee" aria-label="Authorized brands"><div class="marquee-track" id="marqueeTrack"></div></div>
+
+<!-- ABOUT / OWNER JOURNEY -->
+<section class="section" id="about" aria-label="About GK Batteries — the journey of owner Gous Khan">
+  <div class="container">
+    <div class="sec-header fade-in">
+      <div class="sec-tag"><i data-lucide="history"></i> Our Story</div>
+      <h2>50+ Years of Batteries, <span class="hl">One Family Name</span></h2>
+      <p>From handcrafted hard-rubber batteries to an authorized multi-brand dealer — the journey of owner Gous Khan and GK Batteries.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-story fade-in">
+        <div class="about-owner">
+          <div class="about-owner-icon" id="aboutOwnerIcon"></div>
+          <div class="about-owner-meta">
+            <h3 id="aboutOwnerName"></h3>
+            <span id="aboutOwnerRole"></span>
+          </div>
+        </div>
+        <p class="about-lead" id="aboutLead"></p>
+        <div class="about-prose" id="aboutStory"></div>
+        <div class="about-legacy" id="aboutLegacy"></div>
+      </div>
+      <div class="about-timeline-card fade-in">
+        <h3 class="about-tl-title"><i data-lucide="milestone"></i> The Journey</h3>
+        <ol class="about-tl" id="aboutTimeline"></ol>
+      </div>
+    </div>
+    <div class="about-values" id="aboutValues"></div>
+  </div>
+</section>
 
 <!-- SERVICES -->
 <section class="section" id="services" aria-label="Services">

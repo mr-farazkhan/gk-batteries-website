@@ -64,6 +64,49 @@ document.addEventListener('DOMContentLoaded', () => {
     marqueeTrack.innerHTML = brandItems + brandItems + brandItems; // triple for wide screens
   }
 
+  // --- ABOUT / OWNER JOURNEY ---
+  const aboutOwnerIcon = document.getElementById('aboutOwnerIcon');
+  const aboutOwnerName = document.getElementById('aboutOwnerName');
+  const aboutOwnerRole = document.getElementById('aboutOwnerRole');
+  const aboutLead = document.getElementById('aboutLead');
+  const aboutStory = document.getElementById('aboutStory');
+  const aboutLegacy = document.getElementById('aboutLegacy');
+  const aboutTimeline = document.getElementById('aboutTimeline');
+  const aboutValues = document.getElementById('aboutValues');
+  if (D.about && aboutStory) {
+    if (aboutOwnerIcon) aboutOwnerIcon.innerHTML = `<i data-lucide="${D.about.owner.icon || 'user-round'}"></i>`;
+    if (aboutOwnerName) aboutOwnerName.textContent = D.about.owner.name;
+    if (aboutOwnerRole) aboutOwnerRole.textContent = D.about.owner.role;
+    if (aboutLead) aboutLead.textContent = D.about.lead;
+    if (aboutStory) aboutStory.innerHTML = D.about.story.map(p => `<p>${esc(p)}</p>`).join('');
+    if (aboutLegacy) {
+      aboutLegacy.innerHTML = D.about.legacy.map(l =>
+        `<div class="legacy-card"><span class="legacy-num">${esc(l.value)}</span><span class="legacy-label">${esc(l.label)}</span></div>`
+      ).join('');
+    }
+    if (aboutTimeline) {
+      aboutTimeline.innerHTML = D.about.milestones.map(m => `
+        <li class="tl-item">
+          <span class="tl-dot"><i data-lucide="${m.icon}"></i></span>
+          <div class="tl-body">
+            <div class="tl-meta"><span class="tl-era">${esc(m.era)}</span><span class="tl-years">${esc(m.years)}</span></div>
+            <h4>${esc(m.title)}</h4>
+            <p>${esc(m.text)}</p>
+          </div>
+        </li>
+      `).join('');
+    }
+    if (aboutValues) {
+      aboutValues.innerHTML = D.about.values.map(v => `
+        <div class="value-card fade-in">
+          <div class="value-icon"><i data-lucide="${v.icon}"></i></div>
+          <h4>${esc(v.title)}</h4>
+          <p>${esc(v.text)}</p>
+        </div>
+      `).join('');
+    }
+  }
+
   // --- SERVICES ---
   const svcGrid = document.getElementById('svcGrid');
   if (svcGrid) {
