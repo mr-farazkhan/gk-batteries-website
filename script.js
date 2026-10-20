@@ -84,10 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const observeFadeIns = () => {
     if (!fadeObserver) return;
     document.querySelectorAll('.fade-in, .slide-left, .slide-right').forEach(el => {
-      if (!el.dataset.observed) {
-        el.dataset.observed = '1';
-        fadeObserver.observe(el);
+      if (el.dataset.observed) return;
+      el.dataset.observed = '1';
+      // if the visitor has already scrolled past this block, show it straight
+      // away — otherwise it would stay invisible forever
+      if (el.getBoundingClientRect().bottom < 0) {
+        el.classList.add('visible');
+        return;
       }
+      fadeObserver.observe(el);
     });
   };
 
@@ -449,6 +454,24 @@ document.addEventListener('DOMContentLoaded', () => {
   fadeObserver = observer;
   observeFadeIns();
 
+  // Safety net: a fast scroll (or the End key) can jump over a block, and the
+  // observer never reports it. Anything already above the viewport is revealed
+  // immediately so no section is ever left blank.
+  let revealTicking = false;
+  const revealPassed = () => {
+    document.querySelectorAll('.fade-in:not(.visible), .slide-left:not(.visible), .slide-right:not(.visible)').forEach(el => {
+      if (el.getBoundingClientRect().bottom < 0) {
+        el.classList.add('visible');
+        if (fadeObserver) fadeObserver.unobserve(el);
+      }
+    });
+  };
+  window.addEventListener('scroll', () => {
+    if (revealTicking) return;
+    revealTicking = true;
+    window.requestAnimationFrame(() => { revealPassed(); revealTicking = false; });
+  }, { passive: true });
+
   // --- STAT COUNTER ---
   const statObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -476,14 +499,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- NAVBAR SCROLL ---
   const topbar = document.getElementById('topbar');
   window.addEventListener('scroll', () => {
-    if (topbar) topbar.style.background = window.scrollY > 50 ? 'rgba(10,14,26,.95)' : 'rgba(10,14,26,.85)';
+    if (topbar) topbar.classList.toggle('scrolled', window.scrollY > 50);
     // Active link
     let current = '';
     document.querySelectorAll('section[id]').forEach(s => {
       if (window.scrollY >= s.offsetTop - 100) current = s.id;
     });
     document.querySelectorAll('.tb-link').forEach(link => {
-      link.style.color = link.getAttribute('href') === '#' + current ? '#f59e0b' : '';
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
     });
   }, { passive: true });
 });

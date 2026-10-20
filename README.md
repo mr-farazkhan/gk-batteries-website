@@ -59,6 +59,24 @@ analytics: { gaId: "G-XXXXXXXXXX" }
 
 ---
 
+## Theme
+
+**Light theme** (sunlight readable) — a bright daylight backdrop with frosted white glass panels.
+
+| Layer | Treatment |
+|---|---|
+| Page | Soft daylight gradient (`#f9fbfe → #e9eff8`) with drifting pastel aurora blobs and a fine grain |
+| Surfaces | Frosted white glass: `blur(16px) saturate(170%)`, hairline border `rgba(15,23,42,.10)`, soft dual shadows |
+| Text | `#0f172a` headings, `#475569` body, `#64748b` muted — all ≥ 4.5:1 on white |
+| Accents | Amber `#b45309` / bright `#f59e0b` for CTAs and highlights, blue `#2563eb`, green `#15803d` |
+| Product photos | A **dark studio panel** inside each card, so the batteries keep their contrast and the brand crops blend seamlessly |
+
+The theme is driven by the CSS custom properties in `:root` — change `--bg`, `--text`, `--amber`
+and the whole site follows. The product images are cut-outs (transparent PNG/WebP) with feathered
+edges, so they sit on any background.
+
+---
+
 ## Performance
 
 Lighthouse (mobile emulation, throttled 4G) — **100 / 100 / 100 / 100**, stable over 7 consecutive runs:
@@ -74,9 +92,11 @@ What made the difference:
 
 | Technique | Effect |
 |---|---|
+| Light theme (frosted white glass) | same cost as the previous dark theme — measured: FCP 353ms vs 352ms, long-task total 148ms vs 125ms |
 | Self-hosted **subset** fonts (224 KB → 75 KB) + `font-display: optional` | no font-swap repaint, LCP = FCP |
 | **Metric-matched fallback** (`size-adjust` / `ascent-override`) | a webfont swap can never reflow the page → CLS 0 |
 | Above-the-fold rendered as **static HTML** (ticker, hero, stats, marquee) | no post-paint DOM mutation → CLS 0, no long task |
+| Scroll-reveal safety net | a fast scroll (or the End key) that jumps over a block no longer leaves it invisible |
 | Below-the-fold sections rendered in **staggered idle chunks** | TBT 230ms → 10–50ms |
 | `<link rel="preload">` on the stylesheet | CSS downloads in parallel with the HTML |
 | **Content-hashed asset URLs** (`styles.css?v=8cd7b108`) | a deploy is never hidden behind a stale browser cache |
