@@ -5,11 +5,12 @@
   "private": true,
   "scripts": {
     "build": "node tools/build.js",
+    "check": "node --check script.js && node --check data.js && node --check analytics.js && node tools/build.js",
     "sprite": "node tools/make-sprite.js",
-    "images": "python tools/optimize-images.py",
+    "images": "python tools/prepare-product-images.py && python tools/remove-bg.py",
+    "fonts": "python tools/fetch-fonts.py && python tools/subset-fonts.py",
     "og": "python tools/make-images.py",
-    "serve": "python -m http.server 8123",
-    "check": "node --check script.js && node --check data.js && node --check analytics.js && node tools/build.js"
+    "serve": "python -m http.server 8123"
   },
   "repository": {
     "type": "git",

@@ -11,6 +11,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const ROOT = path.resolve(__dirname, '..');
 const SITE_URL = 'https://gkbatteries.in';
@@ -353,6 +354,35 @@ function buildFaq(D) {
     </section>`;
 }
 
+function buildTicker(D) {
+  const icons = ['zap', 'battery-charging', 'phone', 'repeat', 'home', 'sprout'];
+  const items = D.ticker.map((t, i) =>
+    `<span>${ico(icons[i % icons.length])} ${esc(t)}</span>`).join('');
+  return items + items;
+}
+
+function buildMarquee(D) {
+  const items = D.brands.map(b =>
+    `<span class="marquee-item">${esc(b)}</span><span class="marquee-divider"></span>`).join('');
+  return items + items + items;
+}
+
+function buildHeroBadges(D) {
+  return D.badges.map(b =>
+    `<span class="h-badge">${ico(b.icon)} ${esc(b.text)}</span>`).join('\n        ');
+}
+
+function buildHeroCtas(D) {
+  return `<a href="tel:${esc(D.profile.phone)}" class="btn btn-amber">${ico('phone-call')} Call Now — ${esc(D.profile.phoneDisplay)}</a>
+        <a href="#products" class="btn btn-blue">${ico('battery-charging')} View Products</a>`;
+}
+
+function buildStats(D) {
+  return D.stats.map(s =>
+    `<div class="stat-card"><span class="stat-num">${esc(s.value)}</span><span class="stat-label">${esc(s.label)}</span></div>`
+  ).join('\n          ');
+}
+
 function buildHeroTitle(D) {
   return esc(D.profile.tagline).replace(/(Power Partner)/, '<span class="hl">$1</span>');
 }
@@ -431,6 +461,38 @@ function buildMarkdown(D) {
   return L.join('\n');
 }
 
+/* ---------- cache-bust the static assets ---------- */
+/* styles.css / script.js keep stable filenames, so a new deploy would be
+   hidden behind the browser cache for days. A content hash in the query
+   string means users always get the current build, and the file can still be
+   cached for a year. */
+function versionAssets(html) {
+  const files = ['styles.css', 'script.js', 'data.js', 'analytics.js'];
+  const hash = crypto.createHash('md5');
+  files.forEach(function (f) {
+    const p = path.join(ROOT, f);
+    if (fs.existsSync(p)) hash.update(fs.readFileSync(p));
+  });
+  const v = hash.digest('hex').slice(0, 8);
+  return html.replace(/(href|src)="(styles\.css|script\.js|data\.js|analytics\.js)"/g,
+                      '$1="$2?v=' + v + '"');
+}
+
+/* ---------- inline the stylesheet (saves a render-blocking round trip) ---------- */
+function inlineCss(html) {
+  if (!process.env.GK_INLINE_CSS) return { html: html, changed: false };
+  const cssPath = path.join(ROOT, 'styles.css');
+  if (!fs.existsSync(cssPath)) return { html: html, changed: false };
+  let css = fs.readFileSync(cssPath, 'utf8');
+  // strip comments (keep the data: URLs intact)
+  css = css.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').trim();
+
+  const link = /<link rel="stylesheet" href="styles\.css"\s*\/>/;
+  if (!link.test(html)) return { html: html, changed: false };
+  const styleTag = '<style id="gk-styles">' + css + '</style>';
+  return { html: html.replace(link, styleTag), changed: true };
+}
+
 /* ---------- injection ---------- */
 function inject(html, key, content) {
   const open = '<!-- @gen:' + key + ' -->';
@@ -454,10 +516,19 @@ function main() {
     jsonld: '<script type="application/ld+json">\n' + buildSchema(D) + '\n</script>',
     heroTitle: buildHeroTitle(D),
     heroDesc: buildHeroDesc(D),
+    heroBadges: buildHeroBadges(D),
+    heroCtas: buildHeroCtas(D),
+    statsGrid: buildStats(D),
+    tickerTrack: buildTicker(D),
+    marqueeTrack: buildMarquee(D),
     aboutSection: buildAbout(D),
     serviceAreaSection: buildServiceArea(D),
     faqSection: buildFaq(D)
   };
+
+  const cssRes = inlineCss(html);
+  html = cssRes.html;
+  html = versionAssets(html);
 
   const changed = [];
   Object.keys(blocks).forEach(key => {
@@ -467,6 +538,7 @@ function main() {
   });
 
   fs.writeFileSync(INDEX, html, 'utf8');
+  if (cssRes.changed) changed.push('inline-css');
   console.log('[build] index.html updated → ' + (changed.length ? changed.join(', ') : 'no markers matched'));
   console.log('[build] blocks generated: ' + Object.keys(blocks).length);
 

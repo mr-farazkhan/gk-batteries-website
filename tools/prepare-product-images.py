@@ -16,9 +16,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG = os.path.join(ROOT, "images")
 PROD = os.path.join(IMG, "products")
 
-PRODUCT_MAX = 560      # card image box is 280x200 -> 2x is plenty
-SCENE_MAX = 900
-BRAND_MAX = 760
+PRODUCT_MAX = 420      # card image box is 280x200 -> 2x is plenty
+SCENE_MAX = 720
+BRAND_MAX = 680
 
 
 def webp(im, out, max_side, quality=86):
@@ -81,13 +81,13 @@ def main():
     scenes = {
         "scene-tractor-install.webp": ("tractor-battery.png", SCENE_MAX),
         "scene-inverter-setup.webp": ("inverter-setup.png", SCENE_MAX),
-        "storefront-azad.webp":       ("storefront-azad.png", SCENE_MAX),
+        "storefront-azad.webp":       ("storefront-azad.png", 640),
     }
     for name, (src, mx) in scenes.items():
         s = os.path.join(IMG, src)
         if not os.path.exists(s):
             continue
-        size, kb = webp(Image.open(s), os.path.join(IMG, name), mx, 84)
+        size, kb = webp(Image.open(s), os.path.join(IMG, name), mx, 80)
         print(f"  {name:26} {size}  {kb}KB")
 
 
